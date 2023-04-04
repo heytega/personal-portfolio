@@ -1,4 +1,5 @@
 import React from 'react';
+import style from './App.module.css';
 import About from './components/About';
 import Contact from './components/Contact';
 import Home from './components/Home';
@@ -8,14 +9,15 @@ import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
 import WorkedWith from './components/WorkedWith';
 import Form from './components/Form';
+import NavBar from './components/NavBar';
 
 const App = () => {
   return (
-    <div className='main-container'>
-      <div className='contact-card'>
+    <div className={style.mainContainer}>
+      <div className={style.contactContainer}>
         <Contact />
       </div>
-      <div className='home'>
+      <div className={style.home}>
         <Home />
         <About />
         <Resume />
@@ -25,6 +27,7 @@ const App = () => {
         <WorkedWith />
         <Form />
       </div>
+      <NavBar />
     </div>
   );
 };
