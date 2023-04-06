@@ -5,7 +5,7 @@
 }
 
 .card {
-  width: 350px;
+  width: 300px;
   max-width: 400px;
   border: 1px solid green;
   padding: 30px;
@@ -21,6 +21,10 @@
 
 .logo {
   width: 150px;
+}
+
+.title {
+  font-weight: 500;
 }
 
 .imgContainer {
@@ -41,4 +45,15 @@
   text-align: center;
   color: #fff;
   margin-bottom: 0.5rem;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #999999;
+  font-weight: 500;
+  text-align: center;
 }
