@@ -9,16 +9,24 @@ const Socials = () => {
   return (
     <ul className={Style.socials}>
       <li className={Style.handle}>
-        <img src={twitter} alt='' />
+        <a href='#'>
+          <img src={twitter} alt='' />
+        </a>
       </li>
       <li className={Style.handle}>
-        <img src={linkedin} alt='' />
+        <a href='#'>
+          <img src={linkedin} alt='' />
+        </a>
       </li>
       <li className={Style.handle}>
-        <img src={instagram} alt='' />
+        <a href='#'>
+          <img src={instagram} alt='' />
+        </a>
       </li>
       <li className={Style.handle}>
-        <img src={github} alt='' />
+        <a href='#'>
+          <img src={github} alt='' />
+        </a>
       </li>
     </ul>
   );
