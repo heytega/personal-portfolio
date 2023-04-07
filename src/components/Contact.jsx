@@ -2,6 +2,7 @@ import React from 'react';
 import Style from './Contact.module.css';
 import logo from '../assets/Logo.svg';
 import img from '../assets/me.jpg';
+import Socials from './Socials';
 
 const Contact = () => {
   return (
@@ -23,6 +24,7 @@ const Contact = () => {
         <p className={Style.copyright}>
           &copy; 2023 Fortae. All Rights Reserved
         </p>
+        <Socials />
       </div>
     </section>
   );

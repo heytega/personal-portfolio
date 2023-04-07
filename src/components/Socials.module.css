@@ -1,0 +1,6 @@
+.socials {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding-inline-start: 0;
+}
