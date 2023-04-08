@@ -4,3 +4,9 @@
   justify-content: space-between;
   padding-inline-start: 0;
 }
+
+.handle::before {
+  content: '';
+  border: 1px solid #fff;
+  border-radius: 50px;
+}

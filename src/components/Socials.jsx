@@ -10,22 +10,22 @@ const Socials = () => {
     <ul className={Style.socials}>
       <li className={Style.handle}>
         <a href='#'>
-          <img src={twitter} alt='twitter' />
+          <img className={Style.icon} src={twitter} alt='twitter' />
         </a>
       </li>
       <li className={Style.handle}>
         <a href='#'>
-          <img src={linkedin} alt='linkedin' />
+          <img className={Style.icon} src={linkedin} alt='linkedin' />
         </a>
       </li>
       <li className={Style.handle}>
         <a href='#'>
-          <img src={instagram} alt='instagram' />
+          <img className={Style.icon} src={instagram} alt='instagram' />
         </a>
       </li>
       <li className={Style.handle}>
         <a href='#'>
-          <img src={github} alt='github' />
+          <img className={Style.icon} src={github} alt='github' />
         </a>
       </li>
     </ul>
