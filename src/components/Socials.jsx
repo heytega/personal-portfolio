@@ -10,7 +10,7 @@ const Socials = () => {
     <ul className={Style.socials}>
       <li className={Style.handle}>
         <a href='#'>
-          <img src={twitter} alt='' />
+          <img src={twitter} alt='twitter' />
         </a>
       </li>
       <li className={Style.handle}>
