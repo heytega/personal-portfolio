@@ -15,7 +15,7 @@ const Socials = () => {
       </li>
       <li className={Style.handle}>
         <a href='#'>
-          <img src={linkedin} alt='' />
+          <img src={linkedin} alt='linkedin' />
         </a>
       </li>
       <li className={Style.handle}>
