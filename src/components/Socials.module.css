@@ -5,8 +5,17 @@
   padding-inline-start: 0;
 }
 
-.handle::before {
-  content: '';
-  border: 1px solid #fff;
+.handle {
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 46px;
+  text-align: center;
+  border: 2px solid #565656;
   border-radius: 50px;
+  color: #999999;
+}
+
+.icon {
+  width: 50%;
 }
