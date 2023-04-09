@@ -4,29 +4,32 @@ import github from '../assets/github-original.svg';
 import instagram from '../assets/instagram-original.svg';
 import linkedin from '../assets/linkedin-original.svg';
 import twitter from '../assets/twitter-fill.svg';
+import LineIcon from 'react-lineicons';
 
 const Socials = () => {
   return (
     <ul className={Style.socials}>
       <li className={Style.handle}>
         <a href='#'>
-          <img className={Style.icon} src={twitter} alt='twitter' />
+          <LineIcon name='twitter-original' style={{ color: '#565656' }} />
         </a>
       </li>
       <li className={Style.handle}>
         <a href='#'>
-          <svg>{Style.icon}</svg>
+          <LineIcon name='linkedin-original' style={{ color: '#565656' }} />
           {/* <img className={Style.icon} src={linkedin} alt='linkedin' /> */}
         </a>
       </li>
       <li className={Style.handle}>
         <a href='#'>
-          <img className={Style.icon} src={instagram} alt='instagram' />
+          <LineIcon name='instagram' style={{ color: '#565656' }} />
+
+          {/* <img className={Style.icon} src={instagram} alt='instagram' /> */}
         </a>
       </li>
       <li className={Style.handle}>
         <a href='#'>
-          <img className={Style.icon} src={github} alt='github' />
+          <LineIcon name='github-original' style={{ color: '#565656' }} />
         </a>
       </li>
     </ul>
