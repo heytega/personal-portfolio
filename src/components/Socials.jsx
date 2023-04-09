@@ -24,7 +24,12 @@ const Socials = () => {
         </a>
       </li>
       <li>
-        <a href='#' className={Style.handle}>
+        <a
+          href='#'
+          onMouseOver={() => setChangeColor(true)}
+          onMouseOut={() => setChangeColor(false)}
+          className={Style.handle}
+        >
           <LineIcon
             name='linkedin-original'
             style={{
@@ -35,7 +40,12 @@ const Socials = () => {
         </a>
       </li>
       <li>
-        <a href='#' className={Style.handle}>
+        <a
+          href='#'
+          onMouseOver={() => setChangeColor(true)}
+          onMouseOut={() => setChangeColor(false)}
+          className={Style.handle}
+        >
           <LineIcon
             name='instagram'
             style={{
@@ -46,7 +56,12 @@ const Socials = () => {
         </a>
       </li>
       <li>
-        <a href='#' className={Style.handle}>
+        <a
+          href='#'
+          onMouseOver={() => setChangeColor(true)}
+          onMouseOut={() => setChangeColor(false)}
+          className={Style.handle}
+        >
           <LineIcon
             name='github-original'
             style={{
