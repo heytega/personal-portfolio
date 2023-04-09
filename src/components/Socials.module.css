@@ -18,8 +18,16 @@
   transition: 0.3s;
 }
 
+/* .onHover{
+ color: #0a58ca;
+}
+
+.notHover{
+ color: ;
+} */
+
 .handle:hover {
-  color: #0a58ca;
+  border: 2px solid #0a58ca;
 }
 
 .icon {
