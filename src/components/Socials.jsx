@@ -4,20 +4,25 @@ import LineIcon from 'react-lineicons';
 import { useState } from 'react';
 
 const Socials = () => {
-  const [changeColor, setChangeColor] = useState(false);
+  const [changeColor, setChangeColor] = useState({
+    twitter: false,
+    linkedin: false,
+    instagram: false,
+    github: false,
+  });
   return (
     <ul className={Style.socials}>
       <li>
         <a
           href='#'
-          onMouseOver={() => setChangeColor(true)}
-          onMouseOut={() => setChangeColor(false)}
+          onMouseOver={() => setChangeColor({ ...changeColor, twitter: true })}
+          onMouseOut={() => setChangeColor({ ...changeColor, twitter: false })}
           className={Style.handle}
         >
           <LineIcon
             name='twitter-original'
             style={{
-              color: changeColor ? '#0a58ca' : '#565656',
+              color: changeColor.twitter ? '#28e98c' : '#565656',
               transition: '0.3s',
             }}
           />
@@ -26,14 +31,14 @@ const Socials = () => {
       <li>
         <a
           href='#'
-          onMouseOver={() => setChangeColor(true)}
-          onMouseOut={() => setChangeColor(false)}
+          onMouseOver={() => setChangeColor({ ...changeColor, linkedin: true })}
+          onMouseOut={() => setChangeColor({ ...changeColor, linkedin: false })}
           className={Style.handle}
         >
           <LineIcon
             name='linkedin-original'
             style={{
-              color: changeColor ? '#0a58ca' : '#565656',
+              color: changeColor.linkedin ? '#28e98c' : '#565656',
               transition: '0.3s',
             }}
           />
@@ -42,14 +47,18 @@ const Socials = () => {
       <li>
         <a
           href='#'
-          onMouseOver={() => setChangeColor(true)}
-          onMouseOut={() => setChangeColor(false)}
+          onMouseOver={() =>
+            setChangeColor({ ...changeColor, instagram: true })
+          }
+          onMouseOut={() =>
+            setChangeColor({ ...changeColor, instagram: false })
+          }
           className={Style.handle}
         >
           <LineIcon
             name='instagram'
             style={{
-              color: changeColor ? '#0a58ca' : '#565656',
+              color: changeColor.instagram ? '#28e98c' : '#565656',
               transition: '0.3s',
             }}
           />
@@ -58,14 +67,14 @@ const Socials = () => {
       <li>
         <a
           href='#'
-          onMouseOver={() => setChangeColor(true)}
-          onMouseOut={() => setChangeColor(false)}
+          onMouseOver={() => setChangeColor({ ...changeColor, github: true })}
+          onMouseOut={() => setChangeColor({ ...changeColor, github: false })}
           className={Style.handle}
         >
           <LineIcon
             name='github-original'
             style={{
-              color: changeColor ? '#0a58ca' : '#565656',
+              color: changeColor.github ? '#28e98c' : '#565656',
               transition: '0.3s',
             }}
           />
