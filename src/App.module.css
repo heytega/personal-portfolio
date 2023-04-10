@@ -4,6 +4,17 @@
   height: 100%;
 }
 
+.contactContainer {
+  margin-right: 400px;
+  margin-left: 400px;
+  height: 100vh;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .img {
   width: 100%;
 }

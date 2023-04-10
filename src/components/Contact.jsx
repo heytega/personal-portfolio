@@ -20,7 +20,7 @@ const Contact = () => {
         </div>
         <h1 className={Style.address}>anthony@gmail.com</h1>
         <h1 className={`${Style.address} ${Style.mb20}`}>
-          Base in Ogun State <br /> Nigeria
+          Base in Ogun State Nigeria
         </h1>
         <p className={Style.copyright}>
           &copy; 2023 Fortae. All Rights Reserved
