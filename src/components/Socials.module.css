@@ -27,7 +27,8 @@
 } */
 
 .handle:hover {
-  border: 2px solid #28e98c;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 .icon {

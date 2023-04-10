@@ -3,6 +3,7 @@ import Style from './Contact.module.css';
 import logo from '../assets/Logo.svg';
 import img from '../assets/me.jpg';
 import Socials from './Socials';
+import Button from './Button';
 
 const Contact = () => {
   return (
@@ -26,6 +27,7 @@ const Contact = () => {
         </p>
         <Socials />
       </div>
+      <Button />
     </section>
   );
 };

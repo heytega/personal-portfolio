@@ -1,14 +1,12 @@
 .cardContainer {
   border: 1px solid grey;
-  padding: 5px 15px;
+  border-radius: 30px;
   height: 100%;
-  width: 350px;
+  max-width: 350px;
 }
 
 .card {
-  max-width: 350px;
-  /* border: 1px solid green; */
-  padding: 30px;
+  padding: 35px 45px 0;
 }
 
 .header {
