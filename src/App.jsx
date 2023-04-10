@@ -7,9 +7,9 @@ import Resume from './components/Resume';
 import Services from './components/Services';
 import Skills from './components/Skills';
 import Portfolio from './components/Portfolio';
-import WorkedWith from './components/WorkedWith';
 import Form from './components/Form';
 import NavBar from './components/NavBar';
+import Experience from './components/Experience';
 
 const App = () => {
   return (
@@ -24,7 +24,7 @@ const App = () => {
         <Services />
         <Skills />
         <Portfolio />
-        <WorkedWith />
+        <Experience />
         <Form />
       </div>
       <NavBar />
