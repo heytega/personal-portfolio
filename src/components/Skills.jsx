@@ -1,7 +1,12 @@
 import React from 'react';
+import PageTag from './PageTag';
 
 const Skills = () => {
-  return <div>Skills</div>;
+  return (
+    <section className='skillsContainer'>
+      <PageTag tag='skills' icon='fa-kitchen-set' />
+    </section>
+  );
 };
 
 export default Skills;
