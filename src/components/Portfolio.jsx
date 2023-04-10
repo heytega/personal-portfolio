@@ -1,7 +1,12 @@
 import React from 'react';
+import PageTag from './PageTag';
 
 const Portfolio = () => {
-  return <div>Portfolio</div>;
+  return (
+    <section className='portfolioContainer'>
+      <PageTag tag='portfolio' icon='fa-rectangle-list' />
+    </section>
+  );
 };
 
 export default Portfolio;

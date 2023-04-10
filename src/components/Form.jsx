@@ -1,7 +1,12 @@
 import React from 'react';
+import PageTag from './PageTag';
 
 const Form = () => {
-  return <div>Form</div>;
+  return (
+    <section className='formContainer'>
+      <PageTag tag='contact' icon='fa-pager' />
+    </section>
+  );
 };
 
 export default Form;
