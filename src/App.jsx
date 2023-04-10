@@ -17,7 +17,7 @@ const App = () => {
       <div className={style.contactContainer}>
         <Contact />
       </div>
-      <div className={style.home}>
+      <div className={style.timeline}>
         <Home />
         <About />
         <Resume />

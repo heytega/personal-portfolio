@@ -5,14 +5,17 @@
 }
 
 .contactContainer {
-  margin-right: 400px;
-  margin-left: 400px;
   height: 100vh;
   margin-left: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.timeline {
+  margin-left: 490px;
+  padding: 68px 0;
 }
 
 .img {

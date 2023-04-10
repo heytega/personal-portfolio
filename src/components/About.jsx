@@ -1,7 +1,12 @@
 import React from 'react';
+import PageTag from './PageTag';
 
 const About = () => {
-  return <div>About</div>;
+  return (
+    <section className='aboutContainer'>
+      <PageTag tag='about' icon='fa-user' />
+    </section>
+  );
 };
 
 export default About;

@@ -1,7 +1,12 @@
 import React from 'react';
+import PageTag from './PageTag';
 
 const Resume = () => {
-  return <div>Resume</div>;
+  return (
+    <section className='resumeContainer'>
+      <PageTag tag='resume' icon='fa-briefcase' />
+    </section>
+  );
 };
 
 export default Resume;
