@@ -1,7 +1,7 @@
 import React from 'react';
 import Style from './Contact.module.css';
 import logo from '../assets/Logo.svg';
-import img from '../assets/me.jpg';
+import img from '../assets/my_image.svg';
 import Socials from './Socials';
 import Button from './Button';
 
