@@ -1,6 +1,5 @@
 import React from 'react';
 import Style from './Socials.module.css';
-import LineIcon from 'react-lineicons';
 import { useState } from 'react';
 
 const Socials = () => {
