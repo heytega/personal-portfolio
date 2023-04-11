@@ -1,6 +1,5 @@
 import React from 'react';
 import Style from './Button.module.css';
-import LineIcon from 'react-lineicons';
 
 const Button = () => {
   return (
