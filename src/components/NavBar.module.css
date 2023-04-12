@@ -1,3 +1,12 @@
+.navBarContainer {
+  height: 100vh;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 20;
+}
+
 .mainNavList {
   background-color: #000000;
   list-style-type: none;
@@ -5,6 +14,7 @@
   display: flex;
   flex-direction: column;
   position: fixed;
+
   right: 68px;
   text-align: center;
   gap: 20px;
@@ -21,4 +31,8 @@
   transition: 0.3s;
   color: #999999;
   cursor: pointer;
+}
+
+.navItem:hover {
+  color: var(--primary-color);
 }
