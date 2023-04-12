@@ -35,6 +35,10 @@ a:hover {
 
 body {
   margin: 0;
+  font: 16px;
+  line-height: 1.7;
+  /* color: #999999; */
+  font-weight: 400;
   /* display: flex; */
   /* place-items: center; */
   /* min-width: 320px; */
