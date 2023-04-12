@@ -1,3 +1,7 @@
+.homeContainer {
+  padding-top: 68px;
+}
+
 .mainHeading {
   font-size: 75px;
   /* max-width: 480px; */
@@ -8,10 +12,45 @@
 }
 
 .mainParagraph {
-  max-width: 485px;
+  /* max-width: 485px; */
   font-weight: 400;
   margin-bottom: 31px;
 }
+
+.portfolioLink {
+  position: relative;
+  width: 175px;
+  height: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  border-radius: 50%;
+  border: 1px solid var(--secondary-color);
+  overflow: hidden;
+  margin-right: 110px;
+}
+
+.circle {
+  display: block;
+  vertical-align: middle;
+  animation: rotation 6s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(356deg);
+  }
+}
+
+/* .arrow {
+  position: absolute;
+  vertical-align: middle;
+} */
 
 .green {
   color: var(--primary-color);
