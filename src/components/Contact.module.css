@@ -36,7 +36,9 @@
 
 .img {
   max-width: 250px;
-  border-radius: 30px;
+  border-radius: 50%;
+  /* border: 1px solid var(--secondary-color); */
+  /* mix-blend-mode: color-burn; */
 }
 
 .address {
