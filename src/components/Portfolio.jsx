@@ -3,7 +3,7 @@ import PageTag from './PageTag';
 
 const Portfolio = () => {
   return (
-    <section className='portfolioContainer'>
+    <section className='portfolioContainer' id='portfolio'>
       <PageTag tag='portfolio' icon='fa-rectangle-list' />
     </section>
   );

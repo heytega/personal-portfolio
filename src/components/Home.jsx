@@ -2,8 +2,27 @@ import React from 'react';
 import Style from './Home.module.css';
 import PageTag from './PageTag';
 import Projects from '../assets/round-text.png';
+import Lenis from '@studio-freight/lenis';
 
 const Home = () => {
+  // LENIS IMPLEMENTATION
+  const lenis = new Lenis();
+
+  lenis.on('scroll', (e) => {
+    console.log(e);
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+
+  const handleCircleClick = (section) => {
+    lenis.scrollTo(`#${section}`);
+  };
+
   return (
     <section className={Style.homeContainer} id='home'>
       <PageTag tag='introduce' icon='fa-house-user' />
@@ -16,7 +35,11 @@ const Home = () => {
         <br />
         bringing your ideas to life, one pixel at a time.
       </p>
-      <a href='#' className={Style.portfolioLink}>
+      <a
+        href='#porfolio'
+        className={Style.portfolioLink}
+        onClick={() => handleCircleClick('portfolio')}
+      >
         <img
           className={Style.circle}
           src={Projects}
