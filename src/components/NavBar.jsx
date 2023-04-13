@@ -1,11 +1,9 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import Style from './NavBar.module.css';
 import Lenis from '@studio-freight/lenis';
-import { useInView } from 'react-intersection-observer';
 
 const NavBar = () => {
   const [active, setActive] = useState(null);
-  const buttonRefs = useRef([]);
 
   // LENIS IMPLEMENTATION
   const lenis = new Lenis();
@@ -24,103 +22,10 @@ const NavBar = () => {
   // USE INTERSECTION OBSERVER API TO DETECT WHEN A SECTION IS IN VIEW
   const handleButtonClick = (id) => {
     setActive(id);
-    const targetElement = document.getElementById(id);
-    console.log(targetElement);
-    targetElement.scrollIntoView({ behavior: 'smooth' });
+    // const targetElement = document.getElementById(id);
+    // console.log(targetElement);
+    lenis.scrollTo(`#${id}`);
   };
-
-  const handleButtonRef = (ref, index) => {
-    buttonRefs.current[index] = ref;
-    console.log(buttonRefs.current);
-  };
-
-  const handleIntersection = (sectionId, inView) => {
-    if (inView) {
-      setActiveButtonId(sectionId);
-    }
-  };
-
-  const homeRef = useRef(null);
-  const [homeIntersection, homeInView] = useInView({
-    threshold: 0.5,
-    rootMargin: '-100px',
-    triggerOnce: true,
-  });
-  handleIntersection('home', homeInView);
-
-  const aboutRef = useRef(null);
-  const [aboutIntersection, aboutInView] = useInView({
-    threshold: 0.5,
-    rootMargin: '-100px',
-    triggerOnce: true,
-  });
-  handleIntersection('about', aboutInView);
-
-  const resumeRef = useRef(null);
-  const [resumeIntersection, resumeInView] = useInView({
-    threshold: 0.5,
-    rootMargin: '-100px',
-    triggerOnce: true,
-  });
-  handleIntersection('resume', resumeInView);
-
-  const servicesRef = useRef(null);
-  const [servicesIntersection, servicesInView] = useInView({
-    threshold: 0.5,
-    rootMargin: '-100px',
-    triggerOnce: true,
-  });
-  handleIntersection('services', servicesInView);
-
-  const skillsRef = useRef(null);
-  const [skillsIntersection, skillsInView] = useInView({
-    threshold: 0.5,
-    rootMargin: '-100px',
-    triggerOnce: true,
-  });
-  handleIntersection('skills', skillsInView);
-
-  const portfolioRef = useRef(null);
-  const [portfolioIntersection, portfolioInView] = useInView({
-    threshold: 0.5,
-    rootMargin: '-100px',
-    triggerOnce: true,
-  });
-  handleIntersection('portfolio', portfolioInView);
-
-  const experienceRef = useRef(null);
-  const [experienceIntersection, experienceInView] = useInView({
-    threshold: 0.5,
-    rootMargin: '-100px',
-    triggerOnce: true,
-  });
-  handleIntersection('experience', experienceInView);
-
-  const formRef = useRef(null);
-  const [formIntersection, formInView] = useInView({
-    threshold: 0.5,
-    rootMargin: '-100px',
-    triggerOnce: true,
-  });
-  handleIntersection('form', formInView);
-
-  // useIntersectionObserver(handleIntersection, options, [
-  //   document.getElementById('home'),
-  //   document.getElementById('about'),
-  //   document.getElementById('resume'),
-  //   document.getElementById('services'),
-  //   document.getElementById('skills'),
-  //   document.getElementById('portfolio'),
-  //   document.getElementById('experience'),
-  //   document.getElementById('contact'),
-  // ]);
-
-  // FUNCTIONALITY OF TOGGLE NAVBUTTONS
-
-  // const handleButtonClick = (section) => {
-  //   setActive(section);
-  //   lenis.scrollTo(`#${section}`);
-  // };
 
   return (
     <section className={Style.navBarContainer}>
@@ -128,7 +33,6 @@ const NavBar = () => {
         <li>
           <a
             href='#home'
-            ref={(ref) => handleButtonRef(ref, 0)}
             className={`${Style.navItem} ${active === 'home' && Style.active}`}
             onClick={() => handleButtonClick('home')}
           >
