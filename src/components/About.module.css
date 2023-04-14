@@ -1,3 +1,25 @@
 .aboutContainer {
-  padding-top: 68px;
+  padding: 90px 0;
+  overflow: hidden;
+  /* max-width: 770px; */
+  /* margin-left: auto; */
+}
+
+.header {
+  font-size: 48px;
+  line-height: 60px;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 33px;
+}
+
+.p {
+  line-height: 30px;
+  max-width: 610px;
+  margin-bottom: 1rem;
+  color: #999999;
+}
+
+.green {
+  color: var(--primary-color);
 }
