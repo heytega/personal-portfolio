@@ -3,7 +3,7 @@ import PageTag from './PageTag';
 
 const Skills = () => {
   return (
-    <section className='skillsContainer'>
+    <section className='skillsContainer' id='skills'>
       <PageTag tag='skills' icon='fa-kitchen-set' />
     </section>
   );
