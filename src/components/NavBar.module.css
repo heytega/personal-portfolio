@@ -1,6 +1,7 @@
 .navBarContainer {
   height: 100vh;
   background-color: #000000;
+  height: 100vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
