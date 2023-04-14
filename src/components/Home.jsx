@@ -55,6 +55,17 @@ const Home = () => {
           }}
         ></i>
       </a>
+      <section className={Style.stats}>
+        <div className={Style.stat}>
+          <h1 className={Style.number}>1+</h1>
+          <p className={Style.p}>Years of Experience</p>
+        </div>
+
+        <div className={Style.stat}>
+          <h1 className={Style.number}>6+</h1>
+          <p className={Style.p}>Projects completed</p>
+        </div>
+      </section>
     </section>
   );
 };
