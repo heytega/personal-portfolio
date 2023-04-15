@@ -1,3 +1,78 @@
 .resumeContainer {
   padding: 90px 0;
 }
+
+.resumeTimeline:last-child {
+  padding-bottom: 0;
+}
+
+.header {
+  font-size: 48px;
+  line-height: 48px;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 33px;
+}
+
+.resumeTimeline {
+  position: relative;
+  padding-left: 74px;
+  padding-bottom: 68px;
+  /* border-left: 1px solid var(--secondary-color); */
+}
+
+.resumeTimeline:hover {
+  color: var(--primary-color);
+}
+
+.resumeTimeline:before {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--secondary-color);
+  left: -6px;
+  top: 7px;
+  transition: 0.3s;
+}
+
+.resumeTimeline:hover:before {
+  background: var(--primary-color);
+}
+
+.resumeTimeline:after {
+  content: '';
+  background: #333333;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  z-index: -1;
+}
+
+.date {
+  display: block;
+  margin-bottom: 28px;
+  /* color: #999999; */
+  transition: 0.3s;
+}
+
+/* .date:hover {
+  color: var(--primary-color);
+} */
+
+.jobTitle {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 5px;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.company {
+  font-size: 13px;
+  color: #999999;
+  margin-bottom: 18px;
+}
