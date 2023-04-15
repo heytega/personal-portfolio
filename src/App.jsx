@@ -39,7 +39,7 @@ const App = () => {
         <Home />
         <About />
         <Resume />
-        <Services />
+        {/* <Services /> */}
         <Skills />
         <Portfolio />
         <Experience />

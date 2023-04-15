@@ -59,7 +59,7 @@ const NavBar = () => {
             <i class='fa-solid fa-briefcase'></i>
           </a>
         </li>
-        <li>
+        {/* <li>
           <a
             href='#services'
             className={`${Style.navItem} ${
@@ -69,7 +69,7 @@ const NavBar = () => {
           >
             <i class='fa-solid fa-bars-staggered'></i>
           </a>
-        </li>
+        </li> */}
         <li>
           <a
             href='#skills'
