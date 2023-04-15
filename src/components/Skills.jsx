@@ -1,5 +1,6 @@
 import React from 'react';
 import PageTag from './PageTag';
+import Style from './Skills.module.css';
 
 const Skills = () => {
   return (
