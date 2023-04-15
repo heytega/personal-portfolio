@@ -52,8 +52,10 @@
   vertical-align: middle;
 } */
 
-.green {
-  color: var(--primary-color);
+.stat {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .stats {
