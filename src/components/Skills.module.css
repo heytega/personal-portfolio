@@ -19,10 +19,9 @@
   /* margin-top: calc(var(--bs-gutter-y) * -1);
   margin-right: calc(var(--bs-gutter-x) * -0.5);
   margin-left: calc(var(--bs-gutter-x) * -0.5); */
-  flex-direction: column;
 }
 
-.skill {
+.skillInner {
   font-size: 60px;
   display: inline-flex;
   flex-direction: column;
@@ -41,7 +40,7 @@
   vertical-align: middle;
 }
 
-.skill:hover {
+.skillInner:hover {
   border: 2px solid var(--primary-color);
 }
 
