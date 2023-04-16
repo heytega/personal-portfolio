@@ -2,7 +2,7 @@ import React from 'react';
 import PageTag from './PageTag';
 import Style from './Skills.module.css';
 import MUI from '../assets/material-ui.svg';
-import RQ from '../assets/react-query.svg';
+import RQ from '../assets/reactquery.svg';
 import vite from '../assets/vite.svg';
 
 const Skills = () => {
