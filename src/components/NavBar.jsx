@@ -92,7 +92,7 @@ const NavBar = () => {
             <i class='fa-solid fa-rectangle-list'></i>
           </a>
         </li>
-        <li>
+        {/* <li>
           <a
             href='#experience'
             className={`${Style.navItem} ${
@@ -102,7 +102,7 @@ const NavBar = () => {
           >
             <i class='fa-solid fa-shoe-prints '></i>
           </a>
-        </li>
+        </li> */}
         <li>
           <a
             href='#form'
