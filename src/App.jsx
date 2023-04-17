@@ -42,7 +42,7 @@ const App = () => {
         {/* <Services /> */}
         <Skills />
         <Portfolio />
-        <Experience />
+        {/* <Experience /> */}
         <Form />
       </div>
       <NavBar />
