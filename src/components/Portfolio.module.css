@@ -9,11 +9,57 @@
   margin-bottom: 33px;
 }
 
-/* .project{
- ;
-} */
+.project {
+  height: 410px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  position: relative;
+}
 
 .projectImage {
   width: 100%;
-  border-radius: 30px;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
+
+.projectTools {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #000;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  bottom: 20px;
+  left: 20px;
+}
+
+.projectTool {
+  display: block;
+  font-size: 14px;
+  background: #000;
+  color: #fff;
+  padding: 7px 20px;
+  border-radius: 19px;
+  transition: 0.3s;
+}
+
+.projectDes {
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* .middleWrapper {
+  display: flex;
+  gap: 20;
+} */
+
+/* .middleWrapper .project {
+  width: 40%;
+} */
