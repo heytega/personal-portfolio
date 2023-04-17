@@ -8,3 +8,12 @@
   line-height: 60px;
   margin-bottom: 33px;
 }
+
+/* .project{
+ ;
+} */
+
+.projectImage {
+  width: 100%;
+  border-radius: 30px;
+}
