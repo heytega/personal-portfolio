@@ -14,10 +14,12 @@
 }
 
 .timeline {
-  margin-left: 490px;
+  /* margin-left: 490px; */
+  margin-left: 33vw;
   /* padding: 68px 0; */
   /* margin-right: 75px; */
-  margin-right: 150px;
+  /* margin-right: 150px; */
+  margin-right: 13vw;
 }
 
 .img {

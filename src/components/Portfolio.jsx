@@ -4,6 +4,7 @@ import Style from './Portfolio.module.css';
 import Devops from '../assets/devops.png';
 import HNG from '../assets/HNG.png';
 import rest from '../assets/rest.png';
+import metabnb from '../assets/metabnb.png';
 
 const Portfolio = () => {
   return (
@@ -72,8 +73,31 @@ const Portfolio = () => {
                 </li>
               </ul>
             </div>
-            <h2 className={Style.projectDes}>Restcountries - Countries API</h2>
+            <h2 className={Style.projectDes}>Restcountries - Country API</h2>
           </div>
+        </div>
+        <div className={Style.portfolioItem}>
+          <div className={Style.project}>
+            <img className={Style.projectImage} src={metabnb} alt='' />
+            <ul className={Style.projectTools}>
+              <li>
+                <a className={Style.projectTool} href='#'>
+                  React
+                </a>
+              </li>
+              <li>
+                <a className={Style.projectTool} href='#'>
+                  Framer Motion
+                </a>
+              </li>
+              <li>
+                <a className={Style.projectTool} href='#'>
+                  AOS
+                </a>
+              </li>
+            </ul>
+          </div>
+          <h2 className={Style.projectDes}>Metabnb - Metaverse Rental</h2>
         </div>
       </div>
     </section>
