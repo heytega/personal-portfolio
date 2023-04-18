@@ -4,6 +4,7 @@ import Style from './Skills.module.css';
 import MUI from '../assets/material-ui.svg';
 import RQ from '../assets/reactquery.svg';
 import vite from '../assets/vite.svg';
+import Electron from '../assets/Electron.svg';
 
 const Skills = () => {
   return (
@@ -51,6 +52,14 @@ const Skills = () => {
             <h1 className={Style.percent}>65%</h1>
           </div>
           <p className={Style.name}>Vitejs</p>
+        </div>
+
+        <div className={Style.skill}>
+          <div className={Style.skillInner}>
+            <img className={Style.icon} src={Electron} alt='mui' />
+            <h1 className={Style.percent}>50%</h1>
+          </div>
+          <p className={Style.name}>Electron</p>
         </div>
       </div>
     </section>
