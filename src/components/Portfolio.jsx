@@ -33,47 +33,48 @@ const Portfolio = () => {
         </div>
 
         <div className={Style.middleWrapper}>
-          <div className={Style.project}>
-            <img className={Style.projectImage} src={HNG} alt='' />
-            <ul className={Style.projectTools}>
-              <li>
-                <a className={Style.projectTool} href='#'>
-                  Electron
-                </a>
-              </li>
-              <li>
-                <a className={Style.projectTool} href='#'>
-                  React
-                </a>
-              </li>
-              <li>
-                <a className={Style.projectTool} href='#'>
-                  Material UI
-                </a>
-              </li>
-            </ul>
+          <div className={Style.portfolioItem}>
+            <div className={Style.project}>
+              <img className={Style.projectImage} src={HNG} alt='' />
+              <ul className={Style.projectTools}>
+                <li>
+                  <a className={Style.projectTool} href='#'>
+                    Electron
+                  </a>
+                </li>
+                <li>
+                  <a className={Style.projectTool} href='#'>
+                    React
+                  </a>
+                </li>
+                <li>
+                  <a className={Style.projectTool} href='#'>
+                    Material UI
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <h2 className={Style.projectDes}>Opspad - Desktop Application</h2>
           </div>
-          <h2 className={Style.projectDes}>Opspad - Desktop Application</h2>
+          <div className={Style.portfolioItem}>
+            <div className={Style.project}>
+              <img className={Style.projectImage} src={rest} alt='' />
+              <ul className={Style.projectTools}>
+                <li>
+                  <a className={Style.projectTool} href='#'>
+                    material ui
+                  </a>
+                </li>
+                <li>
+                  <a className={Style.projectTool} href='#'>
+                    React
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <h2 className={Style.projectDes}>Restcountries - Countries API</h2>
+          </div>
         </div>
-
-        <div className={Style.project}>
-          <img className={Style.projectImage} src={rest} alt='' />
-          <ul className={Style.projectTools}>
-            <li>
-              <a className={Style.projectTool} href='#'>
-                material ui
-              </a>
-            </li>
-            <li>
-              <a className={Style.projectTool} href='#'>
-                React
-              </a>
-            </li>
-          </ul>
-        </div>
-        <h2 className={Style.projectDes}>
-          Country API - Countries of the World
-        </h2>
       </div>
     </section>
   );

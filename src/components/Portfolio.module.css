@@ -55,11 +55,16 @@
   line-height: 1.2;
 }
 
-/* .middleWrapper {
+.middleWrapper {
   display: flex;
-  gap: 20;
-} */
+  flex-direction: row;
+  justify-content: space-between;
+}
 
-/* .middleWrapper .project {
-  width: 40%;
-} */
+.portfolioItem {
+  margin-bottom: 68px;
+}
+
+.middleWrapper .portfolioItem {
+  width: 48%;
+}
