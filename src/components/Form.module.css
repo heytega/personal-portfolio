@@ -1,5 +1,7 @@
 .formContainer {
   padding: 90px 0;
+  max-width: 720px;
+  position: relative;
 }
 
 .header {
@@ -7,4 +9,243 @@
   font-weight: 300;
   line-height: 60px;
   margin-bottom: 33px;
+}
+
+.formContainer h3 {
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  /* color: #101828; */
+  color: #fff;
+  margin-bottom: 0.8rem;
+}
+
+.formContainer .p {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+  color: #fff;
+  /* color: #475467; */
+}
+
+.form {
+  margin-top: 2rem;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+}
+
+.form::placeholder {
+  color: #999999;
+}
+
+.form::placeholder,
+.form input,
+.form textarea {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: 'Inter', sans-serif;
+}
+
+.form label {
+  display: block;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  /* color: #344054; */
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.formFlexContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first_name,
+.last_name {
+  width: 348px;
+}
+
+.controlLast {
+  margin-left: 24px;
+}
+
+.email {
+  width: 720px;
+  /* width: 100%; */
+}
+
+.form textarea,
+.form input {
+  /* border: 1px solid #d0d5dd; */
+  border: 1px solid var(--secondary-color);
+  border-radius: 8px;
+}
+
+.form input {
+  height: 44px;
+  padding: 10px 14px;
+  align-items: center;
+}
+
+.form textarea {
+  width: 100%;
+  height: 132px;
+  padding: 12px 14px;
+  resize: none;
+}
+
+.form textarea:focus,
+.form input:focus {
+  outline: none;
+  border: 1px solid var(--primary-color);
+  /* box-shadow: 0px 3px 2px rgba(16, 24, 40, 0.05), 0px 0px 10px 1px #d1e9ff; */
+}
+
+.formControl {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.checkboxContainer {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-top: -0.5rem;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #475467;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkboxContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Creating a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  /* border: 1px solid #d0d5dd; */
+  border: 1px solid var(--secondary-color);
+  /* background-color: #eee; */
+  background-color: #0000;
+}
+
+.checkboxContainer:hover input ~ .checkmark {
+  /* box-shadow: 0px 3px 2px rgba(16, 24, 40, 0.05), 0px 0px 10px 1px #d1e9ff; */
+  border: 1px solid var(--primary-color);
+}
+
+.checkboxContainer input:checked ~ .checkmark {
+  /* border: #1570ef 1px solid; */
+  border: 1px solid var(--primary-color);
+}
+
+/* Creating the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkboxContainer input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Styling the checkmark/indicator */
+.checkboxContainer .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  /* border: 2px solid #1570ef; */
+  border: 2px solid var(--primary-color);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* button */
+.formControl .btn {
+  display: inline-block;
+  position: relative;
+  background-color: #175cd3;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 8px;
+  padding: 12px 20px 12px 20px;
+  border: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.formControl .btn:hover {
+  background-color: #1570ef;
+}
+
+/* helper text */
+.helperText,
+.error {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.helperText {
+  color: #475467;
+}
+
+.error {
+  display: block;
+  color: #f83f23;
+}
+
+@media (max-width: 781px) {
+  .email {
+    width: 100%;
+  }
+
+  .formFlexContainer {
+    flex-direction: column;
+  }
+
+  .first_name,
+  .last_name {
+    width: 100%;
+  }
+
+  .controlLast {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 780px) {
+  .formContainer {
+    width: 90%;
+  }
+
+  .p {
+    font-size: 18px;
+  }
 }
