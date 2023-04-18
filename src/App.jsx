@@ -10,6 +10,7 @@ import Portfolio from './components/Portfolio';
 import Form from './components/Form';
 import NavBar from './components/NavBar';
 import Experience from './components/Experience';
+import Testimonial from './components/Testimonial';
 import Lenis from '@studio-freight/lenis';
 
 const App = () => {
@@ -42,6 +43,7 @@ const App = () => {
         {/* <Services /> */}
         <Skills />
         <Portfolio />
+        {/* <Testimonial/> */}
         {/* <Experience /> */}
         <Form />
       </div>
