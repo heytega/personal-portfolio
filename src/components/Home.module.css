@@ -28,7 +28,6 @@
   border-radius: 50%;
   border: 1px solid var(--secondary-color);
   overflow: hidden;
-  margin-right: 55px;
 }
 
 .circle {
@@ -83,7 +82,8 @@
 
 @media (max-width: 1200px) {
   .homeContainer {
-    width: 60vw;
+    /* width: 65vw; */
+    width: 100%;
     margin: 0 auto;
   }
 }
