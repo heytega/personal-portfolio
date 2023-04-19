@@ -9,7 +9,7 @@ const NavBar = () => {
   const lenis = new Lenis();
 
   lenis.on('scroll', (e) => {
-    console.log(e);
+    // console.log(e);
   });
 
   function raf(time) {
@@ -32,7 +32,7 @@ const NavBar = () => {
       <ul className={Style.mainNavList}>
         <li>
           <a
-            href='#home'
+            // href='#home'
             className={`${Style.navItem} ${active === 'home' && Style.active}`}
             onClick={() => handleButtonClick('home')}
           >
