@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PageTag from './PageTag';
 import Style from './Form.module.css';
 import { motion } from 'framer-motion';
+import Button from './Button';
 
 const helperVariant = {
   hidden: {
@@ -222,8 +223,12 @@ const Form = () => {
           </label>
         </div>
         <div className={Style.formControl}>
-          <button className={Style.btn} id='btn__submit' type='submit'>
+          {/* <button className={Style.btn} id='btn__submit' type='submit'>
             Send message
+          </button> */}
+          <button className={Style.contactBtn} id='btn__submit' type='submit'>
+            <i class='fa-regular fa-envelope fa-lg'></i>
+            <p className={Style.caption}>Hire me!</p>
           </button>
         </div>
       </form>
