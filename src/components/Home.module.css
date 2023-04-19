@@ -32,7 +32,7 @@
 
 .circle {
   display: block;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   animation: rotation 6s infinite linear;
 }
 
