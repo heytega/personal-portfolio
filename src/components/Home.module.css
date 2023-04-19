@@ -80,3 +80,10 @@
   text-transform: uppercase;
   margin-bottom: 1px;
 }
+
+@media (max-width: 1200px) {
+  .homeContainer {
+    width: 60vw;
+    margin: 0 auto;
+  }
+}

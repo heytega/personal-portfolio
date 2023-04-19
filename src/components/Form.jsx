@@ -228,7 +228,7 @@ const Form = () => {
           </button> */}
           <button className={Style.contactBtn} id='btn__submit' type='submit'>
             <i class='fa-regular fa-envelope fa-lg'></i>
-            <p className={Style.caption}>Hire me!</p>
+            <p className={Style.caption}>Send Message</p>
           </button>
         </div>
       </form>
