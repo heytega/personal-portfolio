@@ -60,7 +60,8 @@
 
 .stats {
   gap: 100px;
-  margin-top: 55px;
+  /* margin-top: 55px; */
+  margin-top: 31px;
   display: flex;
 }
 

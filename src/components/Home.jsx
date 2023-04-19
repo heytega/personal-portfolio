@@ -27,8 +27,9 @@ const Home = () => {
     <section className={Style.homeContainer} id='home'>
       <PageTag tag='introduce' icon='fa-house-user' />
       <h1 className={Style.mainHeading}>
-        Hello I'm <span className={Style.green}>Tega</span>, A Web Developer and
-        Computer Scientist
+        Hello I'm <span className={Style.green}>Tega</span>, A Web Developer
+        {/* and
+        Computer Scientist */}
       </h1>
       <p className={Style.mainParagraph}>
         My goal is to empower your brand with modern and intuitive interfaces,
