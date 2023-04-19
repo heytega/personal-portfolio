@@ -4,8 +4,27 @@ import logo from '../assets/Logo.svg';
 import img from '../assets/imagee.jpg';
 import Socials from './Socials';
 import Button from './Button';
+import Lenis from '@studio-freight/lenis';
 
 const Contact = () => {
+  // LENIS IMPLEMENTATION
+  const lenis = new Lenis();
+
+  lenis.on('scroll', (e) => {
+    // console.log(e);
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+
+  const hireMe = () => {
+    lenis.scrollTo('#form');
+  };
+
   return (
     <section className={Style.cardContainer}>
       <div className={Style.card}>
@@ -27,7 +46,7 @@ const Contact = () => {
         </p>
         <Socials />
       </div>
-      <Button />
+      <Button hireMe={hireMe} />
     </section>
   );
 };
