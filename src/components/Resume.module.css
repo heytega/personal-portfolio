@@ -83,3 +83,9 @@
     padding: 70px 0;
   }
 }
+
+@media (max-width: 600px) {
+  .resumeTimeline {
+    padding-left: 50px;
+  }
+}
