@@ -10,14 +10,14 @@ const Skills = () => {
   return (
     <section className={Style.skillsContainer} id='skills'>
       <PageTag tag='skills' icon='fa-kitchen-set' />
-      <h1 className={Style.header}>
+      <h1>
         My <span>Advantages</span>
       </h1>
       <div className={Style.skills}>
         <div className={Style.skill}>
           <div className={Style.skillInner}>
             <i class='fa-brands fa-square-js'></i>
-            <h1 className={Style.percent}>80%</h1>
+            <h2 className={Style.percent}>80%</h2>
           </div>
           <p className={Style.name}>Javascript</p>
         </div>
@@ -25,7 +25,7 @@ const Skills = () => {
         <div className={Style.skill}>
           <div className={Style.skillInner}>
             <i class='fa-brands fa-react fa-spin fa-spin-reverse'></i>
-            <h1 className={Style.percent}>85%</h1>
+            <h2 className={Style.percent}>85%</h2>
           </div>
           <p className={Style.name}>React</p>
         </div>
@@ -33,7 +33,7 @@ const Skills = () => {
         <div className={Style.skill}>
           <div className={Style.skillInner}>
             <img className={Style.icon} src={MUI} alt='mui' />
-            <h1 className={Style.percent}>80%</h1>
+            <h2 className={Style.percent}>80%</h2>
           </div>
           <p className={Style.name}>Material UI</p>
         </div>
@@ -41,7 +41,7 @@ const Skills = () => {
         <div className={Style.skill}>
           <div className={Style.skillInner}>
             <img className={Style.icon} src={RQ} alt='mui' />
-            <h1 className={Style.percent}>70%</h1>
+            <h2 className={Style.percent}>70%</h2>
           </div>
           <p className={Style.name}>Tanstack Query</p>
         </div>
@@ -49,7 +49,7 @@ const Skills = () => {
         <div className={Style.skill}>
           <div className={Style.skillInner}>
             <img className={Style.icon} src={vite} alt='mui' />
-            <h1 className={Style.percent}>65%</h1>
+            <h2 className={Style.percent}>65%</h2>
           </div>
           <p className={Style.name}>Vitejs</p>
         </div>
@@ -57,7 +57,7 @@ const Skills = () => {
         <div className={Style.skill}>
           <div className={Style.skillInner}>
             <img className={Style.icon} src={Electron} alt='mui' />
-            <h1 className={Style.percent}>50%</h1>
+            <h2 className={Style.percent}>50%</h2>
           </div>
           <p className={Style.name}>Electron</p>
         </div>

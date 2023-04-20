@@ -2,31 +2,50 @@
   padding: 90px 0;
 }
 
-.header {
+/* .header {
   font-size: 48px;
   line-height: 48px;
   color: #fff;
   font-weight: 300;
   margin-bottom: 33px;
+} */
+
+.skills {
+  /* --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0; */
+  /* width: 758px;
+  display: inline-flex; **/
+  /* gap: 35px; */
+  /* width */
+  /* gap: 10px; */
+  /* justify-content: space-between; */
+  /* flex-wrap: wrap; */
+  /* text-align: center; */
+  /* justify-content: center; */
+  /* margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) * -0.5);
+  margin-left: calc(var(--bs-gutter-x) * -0.5); */
 }
 
 .skills {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 0;
-  display: inline-flex;
-  gap: 35px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  gap: 25px;
   text-align: center;
-  justify-content: center;
-  margin-top: calc(var(--bs-gutter-y) * -1);
-  margin-right: calc(var(--bs-gutter-x) * -0.5);
-  margin-left: calc(var(--bs-gutter-x) * -0.5);
+  /* padding-left: -50px; */
 }
 
 .skill {
   margin-bottom: 50px;
   color: #fff;
+  /* padding-left: 1vw; */
 }
+
+/* .skill:first-child,
+.skill:nth-child(5) {
+  padding-left: 0;
+} */
 
 .skillInner {
   font-size: 60px;
@@ -36,7 +55,7 @@
   color: #fff;
   border: 2px solid var(--secondary-color);
   border-radius: 85px;
-  padding: 55px 50px 48px 55px;
+  padding: 55px 55px 48px 55px;
   gap: 30px;
   /* height: 100px; */
   margin-bottom: 20px;
@@ -56,4 +75,44 @@
   color: var(--primary-color);
   font-weight: 300;
   margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .skillsContainer {
+    padding: 70px 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .skills {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 755px) {
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    overflow: hidden;
+  }
+
+  .skill {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .skillInner {
+    display: flex;
+  }
+}
+
+@media (max-width: 400px) {
+  .skill {
+    margin-bottom: 20px;
+  }
+
+  .skillInner {
+    padding: 40px 35px 40px 35px;
+    gap: 35px;
+  }
 }
