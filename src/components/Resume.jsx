@@ -6,7 +6,7 @@ const Resume = () => {
   return (
     <section className={Style.resumeContainer} id='resume'>
       <PageTag tag='resume' icon='fa-briefcase' />
-      <h1 className={Style.header}>
+      <h1>
         Education & <span>Experience</span>
       </h1>
       <div className={Style.resumeTimeline}>
