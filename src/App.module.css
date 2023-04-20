@@ -4,6 +4,14 @@
   height: 100%;
 }
 
+h1 {
+  font-size: 48px;
+  line-height: 48px;
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 33px;
+}
+
 .contactContainer {
   height: 100vh;
   margin-left: 20px;
@@ -46,5 +54,21 @@
     margin-left: unset;
     margin-right: unset;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .timeline {
+    width: 90%;
+  }
+
+  .contactContainer {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .contactContainer {
+    width: 100%;
   }
 }
