@@ -31,16 +31,16 @@ const Contact = () => {
         <div className={Style.header}>
           <img className={Style.logo} src={logo} alt='logos' />
           <h4 className={Style.title}>
-            Frontend <br /> Developer
+            Frontend <br /> Web Developer
           </h4>
         </div>
         <div className={Style.imgContainer}>
           <img className={Style.img} src={img} alt='my image' />
         </div>
-        <h1 className={Style.address}>anthony@gmail.com</h1>
-        <h1 className={`${Style.address} ${Style.mb20}`}>
+        <h2 className={Style.address}>anthony@gmail.com</h2>
+        <h2 className={`${Style.address} ${Style.mb20}`}>
           Base in Ogun State Nigeria
-        </h1>
+        </h2>
         <p className={Style.copyright}>
           &copy; 2023 Fortae. All Rights Reserved
         </p>
