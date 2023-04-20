@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section className={Style.aboutContainer} id='about'>
       <PageTag tag='about' icon='fa-user' />
-      <h1 className={Style.header}>
+      <h1>
         Every great development begin with an even{' '}
         <span className={Style.green}>better story</span>
       </h1>

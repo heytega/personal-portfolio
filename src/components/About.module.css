@@ -23,3 +23,17 @@
 .green {
   color: var(--primary-color);
 }
+
+@media (max-width: 1200px) {
+  .header {
+    letter-spacing: -1px;
+  }
+
+  .p {
+    max-width: unset;
+  }
+
+  .aboutContainer {
+    padding: 70px 0;
+  }
+}
