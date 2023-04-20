@@ -5,13 +5,13 @@
   /* margin-left: auto; */
 }
 
-.header {
-  font-size: 48px;
+/* .header {
+  font-size: 38px;
   line-height: 60px;
   color: #fff;
   font-weight: 300;
   margin-bottom: 33px;
-}
+} */
 
 .p {
   line-height: 30px;
@@ -25,9 +25,9 @@
 }
 
 @media (max-width: 1200px) {
-  .header {
+  /* .header {
     letter-spacing: -1px;
-  }
+  } */
 
   .p {
     max-width: unset;
