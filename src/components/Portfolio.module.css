@@ -2,12 +2,12 @@
   padding: 90px 0;
 }
 
-.header {
+/* .header {
   font-size: 48px;
   font-weight: 300;
   line-height: 60px;
   margin-bottom: 33px;
-}
+} */
 
 .project {
   height: 410px;
@@ -67,4 +67,20 @@
 
 .middleWrapper .portfolioItem {
   width: 48%;
+}
+
+@media (max-width: 1200px) {
+  .portfolioContainer {
+    padding: 30px 0 70px 0;
+  }
+}
+
+@media (max-width: 755px) {
+  .middleWrapper {
+    flex-direction: column;
+  }
+
+  .middleWrapper .portfolioItem {
+    width: 100%;
+  }
 }

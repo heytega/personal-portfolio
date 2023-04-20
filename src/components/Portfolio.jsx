@@ -10,7 +10,7 @@ const Portfolio = () => {
   return (
     <section className={Style.portfolioContainer} id='portfolio'>
       <PageTag tag='portfolio' icon='fa-rectangle-list' />
-      <h1 className={Style.header}>
+      <h1>
         Featured <span>Projects</span>
       </h1>
       <div className={Style.portfolioItems}>
