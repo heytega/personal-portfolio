@@ -102,7 +102,7 @@ const Form = () => {
   return (
     <section className={Style.formContainer} id='form'>
       <PageTag tag='contact' icon='fa-pager' />
-      <h1 className={Style.header}>
+      <h1>
         Let's Work <span>Together!</span>
       </h1>
       <h3>Contact Me</h3>

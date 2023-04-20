@@ -258,6 +258,12 @@
   margin-left: 10px;
 }
 
+@media (max-width: 1200px) {
+  .formContainer {
+    padding: 30px 0;
+  }
+}
+
 @media (max-width: 781px) {
   .email {
     width: 100%;
@@ -279,7 +285,8 @@
 
 @media (max-width: 780px) {
   .formContainer {
-    width: 90%;
+    width: 100%;
+    /* max-width: unset; */
   }
 
   .p {
