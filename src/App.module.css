@@ -31,6 +31,7 @@
     flex-direction: column;
     align-items: center;
     margin-left: unset;
+    position: relative;
   }
 
   .contactContainer {
@@ -62,6 +63,10 @@
 @media (max-width: 500px) {
   .contactContainer {
     width: 100%;
+  }
+
+  .contactContainer {
+    margin: 15px auto 0 auto;
   }
 
   h1 {
