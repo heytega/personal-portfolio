@@ -27,7 +27,8 @@ const Home = () => {
     <section className={Style.homeContainer} id='home'>
       <PageTag tag='introduce' icon='fa-house-user' />
       <h1 className={Style.mainHeading}>
-        Hello I'm <span className={Style.green}>Tega</span>, A Web Developer
+        Hello I'm <span className={Style.green}>Tega</span>, A Frontend Web
+        Developer
         {/* and
         Computer Scientist */}
       </h1>
@@ -58,13 +59,17 @@ const Home = () => {
       </a>
       <section className={Style.stats}>
         <div className={Style.stat}>
-          <h1 className={Style.number}>1+</h1>
-          <p className={Style.p}>Years of Experience</p>
+          <h2 className={Style.number}>1+</h2>
+          <p className={Style.p}>
+            Years of <br /> Experience
+          </p>
         </div>
 
         <div className={Style.stat}>
-          <h1 className={Style.number}>6+</h1>
-          <p className={Style.p}>Projects completed</p>
+          <h2 className={Style.number}>6+</h2>
+          <p className={Style.p}>
+            Projects <br /> completed
+          </p>
         </div>
       </section>
     </section>
