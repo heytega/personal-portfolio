@@ -66,10 +66,6 @@
   margin-bottom: 68px;
 }
 
-.portfolioItem:last-child {
-  margin-bottom: 0;
-}
-
 .innerPortfolioItem {
   width: 48%;
 }
@@ -83,6 +79,10 @@
 @media (max-width: 755px) {
   .middleWrapper {
     flex-direction: column;
+  }
+
+  .portfolioItem:last-child {
+    margin-bottom: 0;
   }
 
   .innerPortfolioItem {

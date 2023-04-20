@@ -37,7 +37,7 @@ const Contact = () => {
         <div className={Style.imgContainer}>
           <img className={Style.img} src={img} alt='my image' />
         </div>
-        <h2 className={Style.address}>anthony@gmail.com</h2>
+        {/* <h2 className={Style.address}>akpovbiyoranthony@gmail.com</h2> */}
         <h2 className={`${Style.address} ${Style.mb20}`}>
           Base in Ogun State Nigeria
         </h2>
