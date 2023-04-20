@@ -29,10 +29,13 @@ const NavBar = () => {
 
   return (
     <section className={Style.navBarContainer}>
+      <button className={Style.menuBtn}>
+        <i class='fa-solid fa-bars'></i>
+      </button>
       <ul className={Style.mainNavList}>
         <li>
           <a
-            // href='#home'
+            href='#home'
             className={`${Style.navItem} ${active === 'home' && Style.active}`}
             onClick={() => handleButtonClick('home')}
           >
