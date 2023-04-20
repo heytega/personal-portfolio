@@ -105,7 +105,7 @@ const Form = () => {
       <h1>
         Let's Work <span>Together!</span>
       </h1>
-      <h3>Contact Me</h3>
+      {/* <h3>Contact Me</h3> */}
       <p className={Style.p}>
         Hi there, contact me to ask about anything you have in mind.
       </p>
