@@ -61,11 +61,16 @@
   justify-content: space-between;
 }
 
-.portfolioItem {
+.portfolioItem,
+.innerPortfolioItem {
   margin-bottom: 68px;
 }
 
-.middleWrapper .portfolioItem {
+.portfolioItem:last-child {
+  margin-bottom: 0;
+}
+
+.innerPortfolioItem {
   width: 48%;
 }
 
@@ -80,7 +85,7 @@
     flex-direction: column;
   }
 
-  .middleWrapper .portfolioItem {
+  .innerPortfolioItem {
     width: 100%;
   }
 }
