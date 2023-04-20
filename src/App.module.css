@@ -6,7 +6,7 @@
 
 h1 {
   font-size: 48px;
-  line-height: 48px;
+  line-height: 60px;
   color: #fff;
   font-weight: 300;
   margin-bottom: 33px;
@@ -67,8 +67,23 @@ h1 {
   }
 }
 
+@media (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+    line-height: 1.4;
+  }
+}
+
 @media (max-width: 500px) {
   .contactContainer {
     width: 100%;
+  }
+
+  h1 {
+    font-size: 12px;
+  }
+
+  .timeline {
+    width: 95%;
   }
 }
