@@ -116,10 +116,16 @@ const Form = () => {
   const database = getDatabase();
   // console.log(database);
 
+  // const date = new Date();
+  // console.log(date);
+
   // FUNCTION FOR FORM SUBMISSION
   const handleSubmit = (e) => {
     e.preventDefault();
-    set(ref(database, 'message'), {
+    const date = new Date();
+    console.date;
+
+    set(ref(database, `${date}`), {
       firstName: person.firstName,
       lastName: person.lastName,
       email: person.email,
@@ -248,7 +254,7 @@ const Form = () => {
           <label className={Style.checkboxContainer}>
             You agree to providing your data to <span>Tega</span> who may
             contact you
-            <input type='checkbox' required />
+            <input required type='checkbox' />
             <span className={Style.checkmark}></span>
           </label>
         </div>
