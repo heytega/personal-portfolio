@@ -2,10 +2,7 @@ import React, { useState } from 'react';
 import PageTag from './PageTag';
 import Style from './Form.module.css';
 import { motion } from 'framer-motion';
-// import Button from './Button';
-// import {initializeApp, getDatabase} from 'firebase'
-import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, set } from 'firebase/database';
+import useFirebase from '../custom-hooks/useFirebase';
 
 // FRAMER MOTION ANIMATION FOR HELPER TEXT
 const helperVariant = {
@@ -104,34 +101,11 @@ const Form = () => {
     }
   };
 
-  // FIREBASE CONFIG
-  const firebaseConfig = {
-    databaseURL: 'https://portfolio-fortae-default-rtdb.firebaseio.com',
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-
-  // Initialize Realtime Database and get a reference to the service
-  const database = getDatabase();
-  // console.log(database);
-
-  // const date = new Date();
-  // console.log(date);
-
   // FUNCTION FOR FORM SUBMISSION
   const handleSubmit = (e) => {
     e.preventDefault();
-    const date = new Date();
     console.date;
-
-    set(ref(database, `${date}`), {
-      firstName: person.firstName,
-      lastName: person.lastName,
-      email: person.email,
-      message: person.message,
-    });
-
+    useFirebase(person);
     setPerson({ firstName: '', lastName: '', email: '', message: '' });
   };
 
