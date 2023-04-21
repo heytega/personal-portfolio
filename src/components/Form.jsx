@@ -2,8 +2,12 @@ import React, { useState } from 'react';
 import PageTag from './PageTag';
 import Style from './Form.module.css';
 import { motion } from 'framer-motion';
-import Button from './Button';
+// import Button from './Button';
+// import {initializeApp, getDatabase} from 'firebase'
+import { initializeApp } from 'firebase/app';
+import { getDatabase, ref, set } from 'firebase/database';
 
+// FRAMER MOTION ANIMATION FOR HELPER TEXT
 const helperVariant = {
   hidden: {
     opacity: 0,
@@ -14,6 +18,7 @@ const helperVariant = {
 };
 
 const Form = () => {
+  // HELPER STATE
   const [showHelper, setShowHelper] = useState({
     firstName: false,
     lastName: false,
@@ -21,6 +26,7 @@ const Form = () => {
     message: false,
   });
 
+  // FORM TAG STATE
   const [person, setPerson] = useState({
     firstName: '',
     lastName: '',
@@ -28,12 +34,14 @@ const Form = () => {
     message: '',
   });
 
+  // USESTATE FUNCTION MANAGEMENT
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
     setPerson({ ...person, [name]: value });
   };
 
+  // FUNCTION FOR HELPER TEXTS
   const showHelperText = (e) => {
     const tag = e.target.name;
     if (tag === 'firstName') {
@@ -96,9 +104,31 @@ const Form = () => {
     }
   };
 
+  // FIREBASE CONFIG
+  const firebaseConfig = {
+    databaseURL: 'https://portfolio-fortae-default-rtdb.firebaseio.com',
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+  // Initialize Realtime Database and get a reference to the service
+  const database = getDatabase();
+  // console.log(database);
+
+  // FUNCTION FOR FORM SUBMISSION
   const handleSubmit = (e) => {
     e.preventDefault();
+    set(ref(database, 'message'), {
+      firstName: person.firstName,
+      lastName: person.lastName,
+      email: person.email,
+      message: person.message,
+    });
+
+    setPerson({ firstName: '', lastName: '', email: '', message: '' });
   };
+
   return (
     <section className={Style.formContainer} id='form'>
       <PageTag tag='contact' icon='fa-pager' />
