@@ -77,3 +77,15 @@
     /* margin-bottom: 90px; */
   }
 }
+
+@media (max-width: 330px) {
+  .logo {
+    width: 140px;
+  }
+  .title {
+    font-size: 14px;
+  }
+  .header {
+    margin-bottom: 20px;
+  }
+}
