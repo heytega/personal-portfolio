@@ -12,6 +12,7 @@
   font-weight: 400;
   --primary-color: #28e98c;
   --secondary-color: #565656;
+  --background-color: #191919;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   /* background-color: #242424; */
