@@ -36,7 +36,7 @@ const Form = () => {
 
   // STATE FOR ALERT
   const [showAlert, setShowAlert] = useState(false);
-
+  const [loading, setLoading] = useState(false);
   // console.log(active);
 
   // FUNCTION TO TOGGLE CHECKBOX STATE
@@ -118,10 +118,13 @@ const Form = () => {
   // FUNCTION FOR FORM SUBMISSION
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.date;
+    setLoading(true);
     useFirebase(person);
-    setPerson({ firstName: '', lastName: '', email: '', message: '' });
-    setShowAlert(true);
+    setTimeout(() => {
+      setLoading(false);
+      setShowAlert(true);
+      setPerson({ firstName: '', lastName: '', email: '', message: '' });
+    }, 2000);
     setTimeout(() => {
       setShowAlert(false);
     }, 3000);
@@ -272,7 +275,12 @@ const Form = () => {
             id='btn__submit'
             type='submit'
           >
-            <i class='fa-regular fa-envelope fa-lg'></i>
+            {loading ? (
+              <i class='fa-solid fa-circle-notch fa-spin'></i>
+            ) : (
+              <i class='fa-regular fa-envelope fa-lg'></i>
+            )}
+
             <p className={Style.caption}>Send Message</p>
           </button>
         </div>
