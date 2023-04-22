@@ -31,6 +31,16 @@ const Form = () => {
     message: '',
   });
 
+  // CHECKBOX STATE
+  const [checked, setChecked] = useState(false);
+  // console.log(active);
+
+  // FUNCTION TO TOGGLE CHECKBOX STATE
+
+  const handleCheck = () => {
+    setChecked(!checked);
+  };
+
   // USESTATE FUNCTION MANAGEMENT
   const handleChange = (e) => {
     const name = e.target.name;
@@ -228,7 +238,7 @@ const Form = () => {
           <label className={Style.checkboxContainer}>
             You agree to providing your data to <span>Tega</span> who may
             contact you
-            <input required type='checkbox' />
+            <input onChange={handleCheck} type='checkbox' />
             <span className={Style.checkmark}></span>
           </label>
         </div>
@@ -236,7 +246,13 @@ const Form = () => {
           {/* <button className={Style.btn} id='btn__submit' type='submit'>
             Send message
           </button> */}
-          <button className={Style.contactBtn} id='btn__submit' type='submit'>
+          <button
+            disabled={checked ? false : true}
+            className={Style.contactBtn}
+            style={{ opacity: checked ? '1' : '0.2' }}
+            id='btn__submit'
+            type='submit'
+          >
             <i class='fa-regular fa-envelope fa-lg'></i>
             <p className={Style.caption}>Send Message</p>
           </button>
