@@ -127,7 +127,7 @@ const Form = () => {
     }, 2000);
     setTimeout(() => {
       setShowAlert(false);
-    }, 3000);
+    }, 4000);
   };
 
   return (
