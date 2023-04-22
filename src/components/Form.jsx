@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import PageTag from './PageTag';
 import Style from './Form.module.css';
-import { motion } from 'framer-motion';
+import { createBox, motion } from 'framer-motion';
 import useFirebase from '../custom-hooks/useFirebase';
 
 // FRAMER MOTION ANIMATION FOR HELPER TEXT
@@ -33,6 +33,10 @@ const Form = () => {
 
   // CHECKBOX STATE
   const [checked, setChecked] = useState(false);
+
+  // STATE FOR ALERT
+  const [showAlert, setShowAlert] = useState(false);
+
   // console.log(active);
 
   // FUNCTION TO TOGGLE CHECKBOX STATE
@@ -117,11 +121,16 @@ const Form = () => {
     console.date;
     useFirebase(person);
     setPerson({ firstName: '', lastName: '', email: '', message: '' });
+    setShowAlert(true);
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 3000);
   };
 
   return (
     <section className={Style.formContainer} id='form'>
       <PageTag tag='contact' icon='fa-pager' />
+
       <h1>
         Let's Work <span>Together!</span>
       </h1>
@@ -129,6 +138,16 @@ const Form = () => {
       <p className={Style.p}>
         Hi there, contact me to ask about anything you have in mind.
       </p>
+
+      <div
+        style={{ opacity: showAlert ? '1' : '0' }}
+        className={Style.messageAlert}
+      >
+        <div className={Style.alertCircle}>
+          <i class='fa-solid fa-check'></i>
+        </div>
+        <p className={Style.alertText}>Your message has been sent!</p>
+      </div>
 
       <form className={Style.form} onSubmit={handleSubmit} autoComplete='on'>
         <div className={Style.formFlexContainer}>
