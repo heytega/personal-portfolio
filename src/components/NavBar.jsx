@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import Style from './NavBar.module.css';
 import Lenis from '@studio-freight/lenis';
+import Socials from './Socials';
 
 const NavBar = () => {
   const [active, setActive] = useState(null);
+  const [showSideMenu, setShowSideMenu] = useState(false);
 
   // LENIS IMPLEMENTATION
   const lenis = new Lenis();
@@ -24,15 +26,29 @@ const NavBar = () => {
     setActive(id);
     // const targetElement = document.getElementById(id);
     // console.log(targetElement);
+    setShowSideMenu(false);
     lenis.scrollTo(`#${id}`);
   };
 
   return (
     <section className={Style.navBarContainer}>
-      <button className={Style.menuBtn}>
-        <i class='fa-solid fa-bars'></i>
+      <button
+        onClick={() => setShowSideMenu(!showSideMenu)}
+        className={Style.menuBtn}
+      >
+        {showSideMenu ? (
+          <i class='fa-solid fa-xmark'></i>
+        ) : (
+          <i class='fa-solid fa-bars'></i>
+        )}
       </button>
-      <ul className={Style.mainNavList}>
+      <ul
+        className={
+          showSideMenu
+            ? Style.mainNavList
+            : `${Style.mainNavList} ${Style.hidden}`
+        }
+      >
         <li>
           <a
             href='#home'
@@ -40,6 +56,7 @@ const NavBar = () => {
             onClick={() => handleButtonClick('home')}
           >
             <i class='fa-solid fa-house-user'></i>
+            <p className={Style.tag}>home</p>
           </a>
         </li>
         <li>
@@ -49,6 +66,7 @@ const NavBar = () => {
             onClick={() => handleButtonClick('about')}
           >
             <i class='fa-solid fa-user'></i>
+            <p className={Style.tag}>about</p>
           </a>
         </li>
         <li>
@@ -60,6 +78,7 @@ const NavBar = () => {
             onClick={() => handleButtonClick('resume')}
           >
             <i class='fa-solid fa-briefcase'></i>
+            <p className={Style.tag}>resume</p>
           </a>
         </li>
         {/* <li>
@@ -82,6 +101,7 @@ const NavBar = () => {
             onClick={() => handleButtonClick('skills')}
           >
             <i class='fa-solid fa-kitchen-set'></i>
+            <p className={Style.tag}>skills</p>
           </a>
         </li>
         <li>
@@ -93,6 +113,7 @@ const NavBar = () => {
             onClick={() => handleButtonClick('portfolio')}
           >
             <i class='fa-solid fa-rectangle-list'></i>
+            <p className={Style.tag}>porfolio</p>
           </a>
         </li>
         {/* <li>
@@ -113,8 +134,13 @@ const NavBar = () => {
             onClick={() => handleButtonClick('form')}
           >
             <i class='fa-solid fa-pager '></i>
+            <p className={Style.tag}>form</p>
           </a>
         </li>
+
+        <div className={Style.socialContainer}>
+          <Socials />
+        </div>
       </ul>
     </section>
   );
