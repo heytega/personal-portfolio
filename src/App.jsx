@@ -35,7 +35,6 @@ const App = () => {
       <video
         className={style.video}
         src={video}
-        controls
         muted
         autoPlay
         loop
