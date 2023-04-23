@@ -42,6 +42,12 @@ const NavBar = () => {
           <i class='fa-solid fa-bars'></i>
         )}
       </button>
+      {showSideMenu && (
+        <div
+          onClick={() => setShowSideMenu(false)}
+          className={Style.sideMenuOverlay}
+        ></div>
+      )}
       <ul
         className={
           showSideMenu
