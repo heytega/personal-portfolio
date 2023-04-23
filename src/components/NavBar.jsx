@@ -52,7 +52,11 @@ const NavBar = () => {
         <li>
           <a
             href='#home'
-            className={`${Style.navItem} ${active === 'home' && Style.active}`}
+            className={
+              showSideMenu
+                ? `${Style.navItem}`
+                : `${Style.navItem} ${active === 'home' && Style.active}`
+            }
             onClick={() => handleButtonClick('home')}
           >
             <i class='fa-solid fa-house-user'></i>
@@ -62,7 +66,11 @@ const NavBar = () => {
         <li>
           <a
             href='#about'
-            className={`${Style.navItem} ${active === 'about' && Style.active}`}
+            className={
+              showSideMenu
+                ? `${Style.navItem}`
+                : `${Style.navItem} ${active === 'about' && Style.active}`
+            }
             onClick={() => handleButtonClick('about')}
           >
             <i class='fa-solid fa-user'></i>
@@ -72,9 +80,11 @@ const NavBar = () => {
         <li>
           <a
             href='#resume'
-            className={`${Style.navItem} ${
-              active === 'resume' && Style.active
-            }`}
+            className={
+              showSideMenu
+                ? `${Style.navItem}`
+                : `${Style.navItem} ${active === 'resume' && Style.active}`
+            }
             onClick={() => handleButtonClick('resume')}
           >
             <i class='fa-solid fa-briefcase'></i>
@@ -95,9 +105,11 @@ const NavBar = () => {
         <li>
           <a
             href='#skills'
-            className={`${Style.navItem} ${
-              active === 'skills' && Style.active
-            }`}
+            className={
+              showSideMenu
+                ? `${Style.navItem}`
+                : `${Style.navItem} ${active === 'skills' && Style.active}`
+            }
             onClick={() => handleButtonClick('skills')}
           >
             <i class='fa-solid fa-kitchen-set'></i>
@@ -107,9 +119,11 @@ const NavBar = () => {
         <li>
           <a
             href='#portfolio'
-            className={`${Style.navItem} ${
-              active === 'portfolio' && Style.active
-            }`}
+            className={
+              showSideMenu
+                ? `${Style.navItem}`
+                : `${Style.navItem} ${active === 'portfolio' && Style.active}`
+            }
             onClick={() => handleButtonClick('portfolio')}
           >
             <i class='fa-solid fa-rectangle-list'></i>
@@ -130,7 +144,11 @@ const NavBar = () => {
         <li>
           <a
             href='#form'
-            className={`${Style.navItem} ${active === 'form' && Style.active}`}
+            className={
+              showSideMenu
+                ? `${Style.navItem}`
+                : `${Style.navItem} ${active === 'form' && Style.active}`
+            }
             onClick={() => handleButtonClick('form')}
           >
             <i class='fa-solid fa-pager '></i>
