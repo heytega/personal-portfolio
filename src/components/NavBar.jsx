@@ -28,12 +28,28 @@ const NavBar = () => {
     // console.log(targetElement);
     setShowSideMenu(false);
     lenis.scrollTo(`#${id}`);
+    hideMenu();
+  };
+
+  // function to show side menu
+  const showMenu = () => {
+    setShowSideMenu(true);
+    if (typeof window != 'undefined' && window.document) {
+      window.document.body.style.overflow = 'hidden';
+      console.log(lenis);
+    }
+  };
+
+  // FUNCTION TO HIDE SIDE MENU
+  const hideMenu = () => {
+    document.body.style.overflow = 'unset';
+    setShowSideMenu(false);
   };
 
   return (
     <section className={Style.navBarContainer}>
       <button
-        onClick={() => setShowSideMenu(!showSideMenu)}
+        onClick={showSideMenu ? hideMenu : showMenu}
         className={Style.menuBtn}
       >
         {showSideMenu ? (
@@ -42,12 +58,13 @@ const NavBar = () => {
           <i class='fa-solid fa-bars'></i>
         )}
       </button>
+
+      {/* OVERLAY */}
       {showSideMenu && (
-        <div
-          onClick={() => setShowSideMenu(false)}
-          className={Style.sideMenuOverlay}
-        ></div>
+        <div onClick={hideMenu} className={Style.sideMenuOverlay}></div>
       )}
+
+      {/* LIST */}
       <ul
         className={
           showSideMenu
