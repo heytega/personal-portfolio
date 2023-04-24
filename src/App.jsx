@@ -9,7 +9,8 @@ import Skills from './components/skills/Skills';
 import Portfolio from './components/portfolio/Portfolio';
 import Form from './components/form/Form';
 import NavBar from './components/nav/NavBar';
-import video from './assets/video.mp4';
+import newVideo from './assets/video.mp4';
+import ReactPlayer from 'react-player';
 import { useState } from 'react';
 import { useEffect } from 'react';
 // import Experience from './components/Experience';
@@ -35,14 +36,15 @@ const App = () => {
       <video
         className={style.video}
         controls={false}
-        src={video}
+        src={newVideo}
         muted
         autoStart
         autoPlay
         loop
         type='video/mp4'
-        // playsInline
+        playsInline
       />
+
       <div className={style.contactContainer}>
         <Contact />
       </div>
