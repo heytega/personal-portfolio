@@ -34,11 +34,13 @@ const App = () => {
     <div className={style.mainContainer}>
       <video
         className={style.video}
+        // controls
         src={video}
         muted
         autoPlay
         loop
         type='video/mp4'
+        // playsInline
       />
       <div className={style.contactContainer}>
         <Contact />
