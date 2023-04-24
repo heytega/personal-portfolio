@@ -34,9 +34,10 @@ const App = () => {
     <div className={style.mainContainer}>
       <video
         className={style.video}
-        // controls
+        controls={false}
         src={video}
         muted
+        autoStart
         autoPlay
         loop
         type='video/mp4'
