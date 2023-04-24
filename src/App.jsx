@@ -10,7 +10,6 @@ import Portfolio from './components/portfolio/Portfolio';
 import Form from './components/form/Form';
 import NavBar from './components/nav/NavBar';
 import newVideo from './assets/video.mp4';
-import ReactPlayer from 'react-player';
 import { useState } from 'react';
 import { useEffect } from 'react';
 // import Experience from './components/Experience';

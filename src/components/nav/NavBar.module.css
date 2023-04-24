@@ -26,7 +26,7 @@
 }
 
 .mainNavList {
-  background-color: #000000;
+  background-color: var(--background-color);
   list-style-type: none;
   border: 1px solid var(--secondary-color);
   display: flex;
