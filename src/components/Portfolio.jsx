@@ -83,7 +83,7 @@ const Portfolio = () => {
               href='https://opspad.dev'
               target='_blank'
               className={Style.projectOverlay}
-              style={{ top: goTo.first ? '0px' : '410px' }}
+              style={{ top: goTo.first && '0px' }}
               onClick={() => toggleGoto('first')}
             >
               <i class='fa-solid fa-arrow-up-right-dots'></i>
@@ -152,7 +152,7 @@ const Portfolio = () => {
                 href='https://restcountryapi.vercel.app/'
                 target='_blank'
                 className={Style.projectOverlay}
-                style={{ top: goTo.third ? '0px' : '410px' }}
+                style={{ top: goTo.third && '0px' }}
                 onClick={() => toggleGoto('third')}
               >
                 <i class='fa-solid fa-arrow-up-right-dots'></i>
@@ -183,7 +183,7 @@ const Portfolio = () => {
               href='https://hng-metabnb.vercel.app/'
               target='_blank'
               className={Style.projectOverlay}
-              style={{ top: goTo.fourth ? '0px' : '410px' }}
+              style={{ top: goTo.fourth && '0px' }}
               onClick={() => toggleGoto('fourth')}
             >
               <i class='fa-solid fa-arrow-up-right-dots'></i>
