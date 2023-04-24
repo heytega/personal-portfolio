@@ -17,6 +17,31 @@
   position: relative;
 }
 
+.projectOverlay {
+  position: absolute;
+  right: 0;
+  /* top: 410px; */
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.8;
+  color: rgb(233, 233, 233);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 40px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
+.projectOverlay p {
+  color: #fff;
+  font-size: 14px;
+  padding-top: 10px;
+  font-weight: 300;
+}
+
 .projectImage {
   width: 100%;
   height: 100%;
@@ -64,6 +89,12 @@
 .portfolioItem,
 .innerPortfolioItem {
   margin-bottom: 68px;
+}
+
+.portfolioItem:hover,
+.innerPortfolioItem:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .innerPortfolioItem {
