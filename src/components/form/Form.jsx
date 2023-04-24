@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react';
-import PageTag from './PageTag';
+import PageTag from '../pageTag/PageTag';
 import Style from './Form.module.css';
 import { createBox, motion } from 'framer-motion';
-import useFirebase from '../custom-hooks/useFirebase';
+import useFirebase from '../../custom-hooks/useFirebase';
 
 // FRAMER MOTION ANIMATION FOR HELPER TEXT
 const helperVariant = {

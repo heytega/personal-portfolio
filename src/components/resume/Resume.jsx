@@ -1,5 +1,5 @@
 import React from 'react';
-import PageTag from './PageTag';
+import PageTag from '../pageTag/PageTag';
 import Style from './Resume.module.css';
 
 const Resume = () => {

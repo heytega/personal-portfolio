@@ -1,7 +1,7 @@
 import React from 'react';
 import Style from './Home.module.css';
-import PageTag from './PageTag';
-import Projects from '../assets/round-text.png';
+import PageTag from '../pageTag/PageTag';
+import Projects from '../../assets/round-text.png';
 import Lenis from '@studio-freight/lenis';
 
 const Home = () => {

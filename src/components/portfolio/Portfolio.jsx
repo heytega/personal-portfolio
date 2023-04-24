@@ -1,10 +1,10 @@
 import React from 'react';
-import PageTag from './PageTag';
+import PageTag from '../pageTag/PageTag';
 import Style from './Portfolio.module.css';
-import Devops from '../assets/devops.png';
-import HNG from '../assets/HNG.png';
-import rest from '../assets/rest.png';
-import metabnb from '../assets/metabnb.png';
+import Devops from '../../assets/devops.png';
+import HNG from '../../assets/HNG.png';
+import rest from '../../assets/rest.png';
+import metabnb from '../../assets/metabnb.png';
 import { useState } from 'react';
 
 const Portfolio = () => {

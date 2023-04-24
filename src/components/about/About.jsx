@@ -1,7 +1,6 @@
 import React from 'react';
-import PageTag from './PageTag';
+import PageTag from '../pageTag/PageTag';
 import Style from './About.module.css';
-// import Gen from '../'
 
 const About = () => {
   return (

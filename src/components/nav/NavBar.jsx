@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Style from './NavBar.module.css';
 import Lenis from '@studio-freight/lenis';
-import Socials from './Socials';
+import Socials from '../socials/Socials';
 
 const NavBar = () => {
   const [active, setActive] = useState(null);

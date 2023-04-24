@@ -1,10 +1,10 @@
 import React from 'react';
-import PageTag from './PageTag';
+import PageTag from '../pageTag/PageTag';
 import Style from './Skills.module.css';
-import MUI from '../assets/material-ui.svg';
-import RQ from '../assets/reactquery.svg';
-import vite from '../assets/vite.svg';
-import Electron from '../assets/electron.svg';
+import MUI from '../../assets/material-ui.svg';
+import RQ from '../../assets/reactquery.svg';
+import vite from '../../assets/vite.svg';
+import Electron from '../../assets/electron.svg';
 
 const Skills = () => {
   return (

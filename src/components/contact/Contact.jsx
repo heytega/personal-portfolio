@@ -1,9 +1,9 @@
 import React from 'react';
 import Style from './Contact.module.css';
-import logo from '../assets/Logo.svg';
-import img from '../assets/imagee.jpg';
-import Socials from './Socials';
-import Button from './Button';
+import logo from '../../assets/Logo.svg';
+import img from '../../assets/imagee.jpg';
+import Socials from '../socials/Socials';
+import Button from '../button/Button';
 import Lenis from '@studio-freight/lenis';
 
 const Contact = () => {
