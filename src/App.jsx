@@ -10,15 +10,24 @@ import Portfolio from './components/portfolio/Portfolio';
 import Form from './components/form/Form';
 import NavBar from './components/nav/NavBar';
 import newVideo from './assets/video.mp4';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useLayoutEffect } from 'react';
+// import { useEffect } from 'react';
 // import Experience from './components/Experience';
 // import Testimonial from './components/Testimonial';
 
 const App = () => {
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
+  // useEffect(() => {
+  // const addLoader = () => setLoading(true);
+  // const removeLoader = () => setLoading(false);
+  // window.addEventListener('DOMContentLoaded', addLoader);
+  // window.removeEventListener('DOMContentLoaded', addLoader);
+  // window.addEventListener('load', removeLoader);
+  // window.removeEventListener('load', removeLoader);
+  // }, []);
+
+  useLayoutEffect(() => {
     const addLoader = () => setLoading(true);
     const removeLoader = () => setLoading(false);
     window.addEventListener('DOMContentLoaded', addLoader);
