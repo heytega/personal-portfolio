@@ -30,8 +30,8 @@ const App = () => {
   useEffect(() => {
     const addLoader = () => setLoading(true);
     const removeLoader = () => setLoading(false);
-    window.addEventListener('onloadstart', addLoader);
-    window.removeEventListener('onloadstart', addLoader);
+    window.addEventListener('DOMContentLoaded', addLoader);
+    window.removeEventListener('DOMContentLoaded', addLoader);
     window.addEventListener('onload', removeLoader);
     window.removeEventListener('onload', removeLoader);
   }, []);
