@@ -30,10 +30,10 @@ const App = () => {
   useLayoutEffect(() => {
     const addLoader = () => setLoading(true);
     const removeLoader = () => setLoading(false);
-    window.addEventListener('DOMContentLoaded', addLoader);
-    window.removeEventListener('DOMContentLoaded', addLoader);
-    window.addEventListener('load', removeLoader);
-    window.removeEventListener('load', removeLoader);
+    window.addEventListener('onloadstart', addLoader);
+    window.removeEventListener('onloadstart', addLoader);
+    window.addEventListener('onload', removeLoader);
+    window.removeEventListener('onload', removeLoader);
   }, []);
 
   if (loading) {
