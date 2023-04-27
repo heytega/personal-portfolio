@@ -10,38 +10,10 @@ import Portfolio from './components/portfolio/Portfolio';
 import Form from './components/form/Form';
 import NavBar from './components/nav/NavBar';
 import newVideo from './assets/video.mp4';
-import { useState, useEffect } from 'react';
-// import { useEffect } from 'react';
-// import Experience from './components/Experience';
-// import Testimonial from './components/Testimonial';
+import { useState } from 'react';
 
 const App = () => {
   const [loading, setLoading] = useState(false);
-
-  // useEffect(() => {
-  // const addLoader = () => setLoading(true);
-  // const removeLoader = () => setLoading(false);
-  // window.addEventListener('DOMContentLoaded', addLoader);
-  // window.removeEventListener('DOMContentLoaded', addLoader);
-  // window.addEventListener('load', removeLoader);
-  // window.removeEventListener('load', removeLoader);
-  // }, []);
-
-  useEffect(() => {
-    const addLoader = () => setLoading(true);
-    const removeLoader = () => setLoading(false);
-    if (window.onloadstart) {
-      addLoader();
-    }
-
-    // if (window.onloadeddata) {
-    //   removeLoader();
-    // }
-    // window.addEventListener('DOMContentLoaded', addLoader);
-    // window.removeEventListener('DOMContentLoaded', addLoader);
-    // window.addEventListener('onload', removeLoader);
-    // window.removeEventListener('onload', removeLoader);
-  }, []);
 
   if (loading) {
     return <div className={style.loading}>Loading</div>;
