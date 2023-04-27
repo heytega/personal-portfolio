@@ -10,7 +10,7 @@ import Portfolio from './components/portfolio/Portfolio';
 import Form from './components/form/Form';
 import NavBar from './components/nav/NavBar';
 import newVideo from './assets/video.mp4';
-import { useState, useLayoutEffect } from 'react';
+import { useState, useEffect } from 'react';
 // import { useEffect } from 'react';
 // import Experience from './components/Experience';
 // import Testimonial from './components/Testimonial';
@@ -27,7 +27,7 @@ const App = () => {
   // window.removeEventListener('load', removeLoader);
   // }, []);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const addLoader = () => setLoading(true);
     const removeLoader = () => setLoading(false);
     window.addEventListener('onloadstart', addLoader);
