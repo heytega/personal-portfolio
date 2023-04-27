@@ -31,9 +31,9 @@ const App = () => {
     const addLoader = () => setLoading(true);
     const removeLoader = () => setLoading(false);
     window.addEventListener('DOMContentLoaded', addLoader);
-    window.removeEventListener('DOMContentLoaded', addLoader);
+    // window.removeEventListener('DOMContentLoaded', addLoader);
     window.addEventListener('onload', removeLoader);
-    window.removeEventListener('onload', removeLoader);
+    // window.removeEventListener('onload', removeLoader);
   }, []);
 
   if (loading) {
