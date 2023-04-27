@@ -34,9 +34,9 @@ const App = () => {
       addLoader();
     }
 
-    if (window.onloadeddata) {
-      removeLoader();
-    }
+    // if (window.onloadeddata) {
+    //   removeLoader();
+    // }
     // window.addEventListener('DOMContentLoaded', addLoader);
     // window.removeEventListener('DOMContentLoaded', addLoader);
     // window.addEventListener('onload', removeLoader);
