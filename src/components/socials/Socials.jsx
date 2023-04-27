@@ -12,12 +12,20 @@ const Socials = () => {
   return (
     <ul className={Style.socials}>
       <li>
-        <a href='#' className={Style.handle}>
+        <a
+          href='https://twitter.com/TegaDev'
+          target='_blank'
+          className={Style.handle}
+        >
           <i class='fa-brands fa-twitter'></i>
         </a>
       </li>
       <li>
-        <a href='#' className={Style.handle}>
+        <a
+          href='https://www.linkedin.com/in/tega-akpovbiyor/'
+          target='_blank'
+          className={Style.handle}
+        >
           <i class='fa-brands fa-linkedin'></i>
         </a>
       </li>
@@ -27,7 +35,7 @@ const Socials = () => {
         </a>
       </li>
       <li>
-        <a href='#' className={Style.handle}>
+        <a href='github.com/heytega' target='_blank' className={Style.handle}>
           <i class='fa-brands fa-github'></i>
         </a>
       </li>
