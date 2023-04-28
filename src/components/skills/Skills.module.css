@@ -55,8 +55,8 @@
   color: #fff;
   border: 2px solid var(--secondary-color);
   border-radius: 85px;
-  /* padding: 55px 55px 48px 55px; */
-  padding: 45px 30px;
+  padding: 55px 55px 48px 55px;
+  /* padding: 45px 30px; */
   gap: 30px;
   /* height: 100px; */
   margin-bottom: 20px;
@@ -72,8 +72,8 @@
 }
 
 .percent {
-  /* font-size: 30px; */
-  font-size: 25px;
+  font-size: 30px;
+  /* font-size: 25px; */
   color: var(--primary-color);
   font-weight: 300;
   margin: 0;
