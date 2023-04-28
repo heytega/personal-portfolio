@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Style from './NavBar.module.css';
 import Lenis from '@studio-freight/lenis';
 import Socials from '../socials/Socials';
+import NavData from './NavBarData';
 
 const NavBar = () => {
   const [active, setActive] = useState(null);
@@ -72,112 +73,23 @@ const NavBar = () => {
             : `${Style.mainNavList} ${Style.hidden}`
         }
       >
-        <li>
+        {NavData.map((li) => (
           <a
-            href='#home'
-            className={
-              showSideMenu
-                ? `${Style.navItem}`
-                : `${Style.navItem} ${active === 'home' && Style.active}`
-            }
-            onClick={() => handleButtonClick('home')}
+            href={`#${li.tag}`}
+            key={li.id}
+            // className={
+            //   showSideMenu
+            //     ? `${Style.navItem}`
+            //     : `${Style.navItem}
+            //     ${active === li.tag && Style.active}`
+            // }
+            className={Style.navItem}
+            onClick={() => handleButtonClick(li.tag)}
           >
-            <i class='fa-solid fa-house-user'></i>
-            <p className={Style.tag}>home</p>
+            <i class={li.i}></i>
+            <p className={Style.tag}>{li.tag}</p>
           </a>
-        </li>
-        <li>
-          <a
-            href='#about'
-            className={
-              showSideMenu
-                ? `${Style.navItem}`
-                : `${Style.navItem} ${active === 'about' && Style.active}`
-            }
-            onClick={() => handleButtonClick('about')}
-          >
-            <i class='fa-solid fa-user'></i>
-            <p className={Style.tag}>about</p>
-          </a>
-        </li>
-        <li>
-          <a
-            href='#resume'
-            className={
-              showSideMenu
-                ? `${Style.navItem}`
-                : `${Style.navItem} ${active === 'resume' && Style.active}`
-            }
-            onClick={() => handleButtonClick('resume')}
-          >
-            <i class='fa-solid fa-briefcase'></i>
-            <p className={Style.tag}>resume</p>
-          </a>
-        </li>
-        {/* <li>
-          <a
-            href='#services'
-            className={`${Style.navItem} ${
-              active === 'services' && Style.active
-            }`}
-            onClick={() => handleButtonClick('services')}
-          >
-            <i class='fa-solid fa-bars-staggered'></i>
-          </a>
-        </li> */}
-        <li>
-          <a
-            href='#skills'
-            className={
-              showSideMenu
-                ? `${Style.navItem}`
-                : `${Style.navItem} ${active === 'skills' && Style.active}`
-            }
-            onClick={() => handleButtonClick('skills')}
-          >
-            <i class='fa-solid fa-kitchen-set'></i>
-            <p className={Style.tag}>skills</p>
-          </a>
-        </li>
-        <li>
-          <a
-            href='#portfolio'
-            className={
-              showSideMenu
-                ? `${Style.navItem}`
-                : `${Style.navItem} ${active === 'portfolio' && Style.active}`
-            }
-            onClick={() => handleButtonClick('portfolio')}
-          >
-            <i class='fa-solid fa-rectangle-list'></i>
-            <p className={Style.tag}>porfolio</p>
-          </a>
-        </li>
-        {/* <li>
-          <a
-            href='#experience'
-            className={`${Style.navItem} ${
-              active === 'experience' && Style.active
-            }`}
-            onClick={() => handleButtonClick('experience')}
-          >
-            <i class='fa-solid fa-shoe-prints '></i>
-          </a>
-        </li> */}
-        <li>
-          <a
-            href='#form'
-            className={
-              showSideMenu
-                ? `${Style.navItem}`
-                : `${Style.navItem} ${active === 'form' && Style.active}`
-            }
-            onClick={() => handleButtonClick('form')}
-          >
-            <i class='fa-solid fa-pager '></i>
-            <p className={Style.tag}>form</p>
-          </a>
-        </li>
+        ))}
 
         <div className={Style.socialContainer}>
           <Socials />
