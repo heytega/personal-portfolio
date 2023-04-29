@@ -24,7 +24,7 @@ const Skills = () => {
 
         <div className={Style.skill}>
           <div className={Style.skillInner}>
-            <i class='fa-brands fa-react fa-spin fa-spin-reverse'></i>
+            <i class='fa-brands fa-react'></i>
             <h2 className={Style.percent}>85%</h2>
           </div>
           <p className={Style.name}>React</p>

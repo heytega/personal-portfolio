@@ -22,7 +22,7 @@ const About = () => {
       </p>
       <p className={Style.p}>
         {' '}
-        During my time as a Frontend ReactJS Developer Intern with HNG/Zuri, I
+        During my time as a Frontend ReactJS Developer Intern with HNG / Zuri, I
         gained valuable experience building web and desktop applications. This
         experience, coupled with my ability to work collaboratively in an agile
         environment and my attention to detail, has prepared me for new

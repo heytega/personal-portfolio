@@ -1,5 +1,6 @@
 .resumeContainer {
   padding: 90px 0;
+  cursor: auto;
 }
 
 .resumeTimeline:last-child {
@@ -11,7 +12,7 @@
   padding-left: 74px;
   /* padding-bottom: 68px; */
   padding-bottom: 45px;
-  color: #999999;
+  /* color: #999999; */
 }
 
 .resumeTimeline:hover {
@@ -48,13 +49,10 @@
 .date {
   display: block;
   margin-bottom: 28px;
+  font-weight: 500;
   /* color: #999999; */
   transition: 0.3s;
 }
-
-/* .date:hover {
-  color: var(--primary-color);
-} */
 
 .jobTitle {
   font-size: 24px;
@@ -65,8 +63,8 @@
 }
 
 .company {
-  font-size: 13px;
-  color: #999999;
+  font-size: 15px;
+  color: #c3c1c1;
   margin-bottom: 18px;
 }
 

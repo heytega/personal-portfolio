@@ -258,8 +258,10 @@ const Form = () => {
 
         <div className={Style.formControl}>
           <label className={Style.checkboxContainer}>
-            You agree to providing your data to <span>Tega</span> who may
-            contact you
+            {/* You agree to providing your data to <span>Tega</span> who may
+            contact you */}
+            In order to send this message, do agree to provide your data to{' '}
+            <span>Tega</span> who may contact you
             <input onChange={handleCheck} type='checkbox' />
             <span className={Style.checkmark}></span>
           </label>
