@@ -231,6 +231,7 @@
   background-color: var(--primary-color);
   color: #000000;
   text-align: center;
+  font-size: 15px;
   font-weight: 400;
   outline: none;
   outline-color: transparent;
@@ -248,7 +249,11 @@
   line-height: 1.7;
 }
 
-.contactBtn:hover {
+.active {
+  transition: 0.3s;
+}
+
+.active:hover {
   border: 2px solid var(--primary-color);
   background-color: #000000;
   color: var(--primary-color);

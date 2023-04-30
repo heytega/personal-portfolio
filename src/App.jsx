@@ -14,6 +14,7 @@ import { useState } from 'react';
 
 const App = () => {
   const [loading, setLoading] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   if (loading) {
     return <div className={style.loading}>Loading</div>;
@@ -36,17 +37,17 @@ const App = () => {
         <Contact />
       </div>
       <div className={style.timeline}>
-        <Home />
-        <About />
-        <Resume />
+        <Home activeIndex={activeIndex} />
+        <About activeIndex={activeIndex} />
+        <Resume activeIndex={activeIndex} />
         {/* <Services /> */}
-        <Skills />
-        <Portfolio />
+        <Skills activeIndex={activeIndex} />
+        <Portfolio activeIndex={activeIndex} />
         {/* <Testimonial/> */}
         {/* <Experience /> */}
-        <Form />
+        <Form activeIndex={activeIndex} />
       </div>
-      <NavBar />
+      <NavBar setActiveIndex={setActiveIndex} />
     </div>
   );
 };

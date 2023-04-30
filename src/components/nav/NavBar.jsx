@@ -1,12 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Style from './NavBar.module.css';
 import Lenis from '@studio-freight/lenis';
 import Socials from '../socials/Socials';
 import NavData from './NavBarData';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
-const NavBar = () => {
+gsap.registerPlugin(ScrollTrigger);
+
+const NavBar = ({ setActiveIndex }) => {
+  // STATES
+  const navRef = useRef(null);
+  const tlRef = useRef(null);
   const [active, setActive] = useState(null);
+
   const [showSideMenu, setShowSideMenu] = useState(false);
+  const [hoverState, setHoverState] = useState(() => {
+    const initialState = {};
+    for (let i = 0; i < NavData.length; i++) {
+      initialState[i] = false;
+    }
+    return initialState;
+  });
+
+  const handleMouseEnter = (index) => {
+    setHoverState((prevState) => ({ ...prevState, [index]: true }));
+  };
+
+  const handleMouseLeave = (index) => {
+    setHoverState((prevState) => ({ ...prevState, [index]: false }));
+  };
 
   // LENIS IMPLEMENTATION
   const lenis = new Lenis();
@@ -47,8 +70,30 @@ const NavBar = () => {
     setShowSideMenu(false);
   };
 
+  // USE-EFFECTS
+  useEffect(() => {
+    //timeline for animating the active color of the navigation
+    const tl = gsap.timeline({ paused: true });
+    tl.to(navRef.current, { '--active-color': 'blue', duration: 0.3 });
+    tl.to(navRef.current, { '--active-color': 'red', duration: 0.3 });
+    tlRef.current = tl;
+
+    // Add ScrollTrigger to each section in the navigation
+    const sections = navRef.current.querySelectorAll('section');
+    sections.forEach((section, index) => {
+      ScrollTigger.create({
+        trigger: section,
+        start: 'top center',
+        onEnter: () => {
+          setActiveIndex(index);
+          tlRef.current.restart();
+        },
+      });
+    });
+  }, []);
+
   return (
-    <section className={Style.navBarContainer}>
+    <div className={Style.navBarContainer} ref={navRef}>
       <button
         onClick={showSideMenu ? hideMenu : showMenu}
         className={Style.menuBtn}
@@ -73,21 +118,32 @@ const NavBar = () => {
             : `${Style.mainNavList} ${Style.hidden}`
         }
       >
-        {NavData.map((li) => (
+        {NavData.map((li, index) => (
           <a
             href={`#${li.tag}`}
-            key={li.id}
+            key={index}
             // className={
             //   showSideMenu
             //     ? `${Style.navItem}`
             //     : `${Style.navItem}
             //     ${active === li.tag && Style.active}`
             // }
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={() => handleMouseLeave(index)}
             className={Style.navItem}
             onClick={() => handleButtonClick(li.tag)}
           >
             <i class={li.i}></i>
             <p className={Style.tag}>{li.tag}</p>
+            <p
+              className={Style.feed}
+              style={{
+                opacity: hoverState[index] ? 1 : 0,
+                visibility: hoverState[index] ? 'visible' : 'hidden',
+              }}
+            >
+              {li.tag}
+            </p>
           </a>
         ))}
 
@@ -95,7 +151,7 @@ const NavBar = () => {
           <Socials />
         </div>
       </ul>
-    </section>
+    </div>
   );
 };
 

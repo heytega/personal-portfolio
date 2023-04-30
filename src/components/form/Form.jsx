@@ -272,8 +272,12 @@ const Form = () => {
           </button> */}
           <button
             disabled={checked ? false : true}
-            className={Style.contactBtn}
-            style={{ opacity: checked ? '1' : '0.2' }}
+            className={
+              checked
+                ? `${Style.contactBtn} ${Style.active}`
+                : `${Style.contactBtn}`
+            }
+            style={{ opacity: checked ? '1' : '0.4' }}
             id='btn__submit'
             type='submit'
           >

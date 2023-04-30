@@ -47,17 +47,19 @@ const Home = () => {
           src={Projects}
           alt='link to see my projects'
         />
-        <i
-          class='fa-solid fa-arrow-down-long fa-lg'
+        <span
+          class='material-symbols-outlined'
           style={{
             color: '#fff',
             position: 'absolute',
-            fontSize: '40px',
+            fontSize: '55px',
             display: 'block',
           }}
-        ></i>
+        >
+          south
+        </span>
       </a>
-      <section className={Style.stats}>
+      <div className={Style.stats}>
         <div className={Style.stat}>
           <h2 className={Style.number}>1+</h2>
           <p className={Style.p}>
@@ -71,7 +73,7 @@ const Home = () => {
             Projects <br /> completed
           </p>
         </div>
-      </section>
+      </div>
     </section>
   );
 };

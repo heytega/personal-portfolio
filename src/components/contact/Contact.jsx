@@ -26,7 +26,7 @@ const Contact = () => {
   };
 
   return (
-    <section className={Style.cardContainer}>
+    <div className={Style.cardContainer}>
       <div className={Style.card}>
         <div className={Style.header}>
           <img className={Style.logo} src={logo} alt='logos' />
@@ -47,7 +47,7 @@ const Contact = () => {
         <Socials />
       </div>
       <Button hireMe={hireMe} />
-    </section>
+    </div>
   );
 };
 
