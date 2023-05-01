@@ -18,50 +18,57 @@ const App = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    const images = document.getElementsByTagName('img');
-    const videos = document.getElementsByTagName('video');
-    const icons = document.getElementsByTagName('i');
-    const spans = document.getElementsByTagName('span');
-    const promises = [];
+    window.addEventListener('load', () => {
+      const timer = setTimeout(() => {
+        setLoading(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    });
 
-    // An array of promises for all images and videos
-    for (let i = 0; i < images.length; i++) {
-      promises.push(
-        new Promises((resolve) => {
-          images[i].onload = resolve;
-        })
-      );
-    }
+    // const images = document.getElementsByTagName('img');
+    // const videos = document.getElementsByTagName('video');
+    // const icons = document.getElementsByTagName('i');
+    // const spans = document.getElementsByTagName('span');
+    // const promises = [];
 
-    for (let i = 0; i < videos.length; i++) {
-      promises.push(
-        new Promise((resolve) => {
-          videos[i].onloadeddata = resolve;
-        })
-      );
-    }
+    // // An array of promises for all images and videos
+    // for (let i = 0; i < images.length; i++) {
+    //   promises.push(
+    //     new Promises((resolve) => {
+    //       images[i].onload = resolve;
+    //     })
+    //   );
+    // }
 
-    for (let i = 0; i < icons.length; i++) {
-      promises.push(
-        new Promise((resolve) => {
-          icons[i].onload = resolve;
-        })
-      );
-    }
+    // for (let i = 0; i < videos.length; i++) {
+    //   promises.push(
+    //     new Promise((resolve) => {
+    //       videos[i].onloadeddata = resolve;
+    //     })
+    //   );
+    // }
 
-    for (let i = 0; i < spans.length; i++) {
-      promises.push(
-        new Promise((resolve) => {
-          spans[i].onload = resolve;
-        })
-      );
-    }
+    // for (let i = 0; i < icons.length; i++) {
+    //   promises.push(
+    //     new Promise((resolve) => {
+    //       icons[i].onload = resolve;
+    //     })
+    //   );
+    // }
 
-    // wait for all promises to resolve before setting isLoading to false
-    Promise.all(promises).then(() => setLoading(false));
+    // for (let i = 0; i < spans.length; i++) {
+    //   promises.push(
+    //     new Promise((resolve) => {
+    //       spans[i].onload = resolve;
+    //     })
+    //   );
+    // }
 
-    // Cancel promises if component unmounts before they resolve
-    return () => promises.forEach((promise) => promise.cancel());
+    // // wait for all promises to resolve before setting isLoading to false
+    // Promise.all(promises).then(() => setLoading(false));
+
+    // // Cancel promises if component unmounts before they resolve
+    // return () => promises.forEach((promise) => promise.cancel());
   }, []);
 
   if (loading) {
