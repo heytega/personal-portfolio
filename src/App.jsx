@@ -58,7 +58,11 @@ const App = () => {
     }
 
     // wait for all promises to resolve before setting isLoading to false
-    Promise.all(promises).then(() => setLoading(false));
+    Promise.all(promises).then(() =>
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000)
+    );
 
     // Cancel promises if component unmounts before they resolve
     return () => promises.forEach((promise) => promise.cancel());
