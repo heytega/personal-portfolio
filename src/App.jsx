@@ -19,9 +19,7 @@ const App = () => {
 
   useEffect(() => {
     window.addEventListener('load', () => {
-      // const timer = setTimeout(() => {
       setLoading(false);
-      // }, 3000);
     });
 
     // const images = document.getElementsByTagName('img');
