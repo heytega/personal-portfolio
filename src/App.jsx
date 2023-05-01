@@ -21,6 +21,7 @@ const App = () => {
     const images = document.getElementsByTagName('img');
     const videos = document.getElementsByTagName('video');
     const icons = document.getElementsByTagName('i');
+    const spans = document.getElementsByTagName('span');
     const promises = [];
 
     // An array of promises for all images and videos
@@ -43,7 +44,15 @@ const App = () => {
     for (let i = 0; i < icons.length; i++) {
       promises.push(
         new Promise((resolve) => {
-          videos[i].onload = resolve;
+          icons[i].onload = resolve;
+        })
+      );
+    }
+
+    for (let i = 0; i < spans.length; i++) {
+      promises.push(
+        new Promise((resolve) => {
+          spans[i].onload = resolve;
         })
       );
     }
