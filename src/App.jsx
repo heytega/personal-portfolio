@@ -22,7 +22,6 @@ const App = () => {
       const timer = setTimeout(() => {
         setLoading(false);
       }, 3000);
-      return () => clearTimeout(timer);
     });
 
     // const images = document.getElementsByTagName('img');
