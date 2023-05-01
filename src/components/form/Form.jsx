@@ -14,7 +14,7 @@ const helperVariant = {
   },
 };
 
-const Form = () => {
+const Form = ({ activeIndex }) => {
   // HELPER STATE
   const [showHelper, setShowHelper] = useState({
     firstName: false,

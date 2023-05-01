@@ -4,7 +4,7 @@ import PageTag from '../pageTag/PageTag';
 import Projects from '../../assets/round-text.png';
 import Lenis from '@studio-freight/lenis';
 
-const Home = () => {
+const Home = ({ activeIndex }) => {
   // LENIS IMPLEMENTATION
   const lenis = new Lenis();
 
@@ -24,7 +24,14 @@ const Home = () => {
   };
 
   return (
-    <section className={Style.homeContainer} id='home'>
+    <section
+      className={
+        activeIndex === 0
+          ? `${Style.homeContainer} ${Style.visible}`
+          : `${Style.homeContainer} ${Style.hidden}`
+      }
+      id='home'
+    >
       <PageTag tag='introduce' icon='fa-house-user' />
       <h1 className={Style.mainHeading}>
         Hello I'm <span className={Style.green}>Tega</span>, A Frontend Web

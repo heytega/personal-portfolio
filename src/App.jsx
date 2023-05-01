@@ -11,10 +11,49 @@ import Form from './components/form/Form';
 import NavBar from './components/nav/NavBar';
 import newVideo from './assets/video.mp4';
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 const App = () => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const images = document.getElementsByTagName('img');
+    const videos = document.getElementsByTagName('video');
+    const icons = document.getElementsByTagName('i');
+    const promises = [];
+
+    // An array of promises for all images and videos
+    for (let i = 0; i < images.length; i++) {
+      promises.push(
+        new Promises((resolve) => {
+          images[i].onload = resolve;
+        })
+      );
+    }
+
+    for (let i = 0; i < videos.length; i++) {
+      promises.push(
+        new Promise((resolve) => {
+          videos[i].onloadeddata = resolve;
+        })
+      );
+    }
+
+    for (let i = 0; i < icons.length; i++) {
+      promises.push(
+        new Promise((resolve) => {
+          videos[i].onload = resolve;
+        })
+      );
+    }
+
+    // wait for all promises to resolve before setting isLoading to false
+    Promise.all(promises).then(() => setLoading(false));
+
+    // Cancel promises if component unmounts before they resolve
+    return () => promises.forEach((promise) => promise.cancel());
+  }, []);
 
   if (loading) {
     return <div className={style.loading}>Loading</div>;
@@ -26,7 +65,7 @@ const App = () => {
         controls={false}
         src={newVideo}
         muted
-        autoStart
+        // autoStart
         autoPlay
         loop
         type='video/mp4'

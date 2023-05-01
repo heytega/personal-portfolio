@@ -133,7 +133,13 @@ const NavBar = ({ setActiveIndex }) => {
             className={Style.navItem}
             onClick={() => handleButtonClick(li.tag)}
           >
-            <i class={li.i}></i>
+            <i
+              style={{
+                '--active-color': 'transparent',
+                background: `var(--active-color)`,
+              }}
+              class={li.i}
+            ></i>
             <p className={Style.tag}>{li.tag}</p>
             <p
               className={Style.feed}
