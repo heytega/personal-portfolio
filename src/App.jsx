@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import style from './App.module.css';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
@@ -10,8 +10,6 @@ import Portfolio from './components/portfolio/Portfolio';
 import Form from './components/form/Form';
 import NavBar from './components/nav/NavBar';
 import newVideo from './assets/video.mp4';
-import { useState } from 'react';
-import { useEffect } from 'react';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
