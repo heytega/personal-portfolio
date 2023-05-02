@@ -7,7 +7,7 @@ import rest from '../../assets/rest.png';
 import metabnb from '../../assets/metabnb.png';
 import { useState } from 'react';
 
-const Portfolio = () => {
+const Portfolio = ({ activeIndex }) => {
   const [goTo, setGoTo] = useState({
     first: false,
     second: false,
