@@ -6,7 +6,7 @@ import RQ from '../../assets/reactquery.svg';
 import vite from '../../assets/vite.svg';
 import Electron from '../../assets/electron.svg';
 
-const Skills = () => {
+const Skills = ({ activeIndex }) => {
   return (
     <section className={Style.skillsContainer} id='skills'>
       <PageTag tag='skills' icon='fa-kitchen-set' />
