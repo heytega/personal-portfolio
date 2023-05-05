@@ -3,7 +3,7 @@ import PageTag from '../pageTag/PageTag';
 import Style from './Resume.module.css';
 import ResumeData from './ResumeData';
 
-const Resume = ({ activeIndex }) => {
+const Resume = () => {
   return (
     <section className={Style.resumeContainer} id='resume'>
       <PageTag tag='resume' icon='fa-briefcase' />
