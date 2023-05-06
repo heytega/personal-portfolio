@@ -23,6 +23,7 @@ const NavBar = ({ setActiveIndex }) => {
     return initialState;
   });
 
+  // Function to handle the state showing the nav description
   const handleMouseEnter = (index) => {
     setHoverState((prevState) => ({ ...prevState, [index]: true }));
   };
