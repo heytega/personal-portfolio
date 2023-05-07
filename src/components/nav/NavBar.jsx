@@ -73,7 +73,7 @@ const NavBar = ({ setActiveIndex }) => {
 
   // USE-EFFECTS
   useEffect(() => {
-    //timeline for animating the active color of the navigation
+    //timeline for animating the active color of the navigation using GSAP
     const tl = gsap.timeline({ paused: true });
     tl.to(navRef.current, { '--active-color': 'blue', duration: 0.3 });
     tl.to(navRef.current, { '--active-color': 'red', duration: 0.3 });
