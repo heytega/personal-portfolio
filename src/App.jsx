@@ -24,35 +24,51 @@ const App = () => {
 
     // An array of promises for all images and videos
     for (let i = 0; i < images.length; i++) {
-      promises.push(
-        new Promise((resolve) => {
+      const promiseWrapper = {
+        promise: new Promise((resolve) => {
           images[i].onload = resolve;
-        })
-      );
+        }),
+        cancel: () => {
+          images[i].onload = null;
+        },
+      };
+      promises.push(promiseWrapper);
     }
 
     for (let i = 0; i < videos.length; i++) {
-      promises.push(
-        new Promise((resolve) => {
+      const promiseWrapper = {
+        promise: new Promise((resolve) => {
           videos[i].onloadeddata = resolve;
-        })
-      );
+        }),
+        cancel: () => {
+          videos[i].onloadeddata = null;
+        },
+      };
+      promises.push(promiseWrapper);
     }
 
     for (let i = 0; i < icons.length; i++) {
-      promises.push(
-        new Promise((resolve) => {
+      const promiseWrapper = {
+        promise: new Promise((resolve) => {
           icons[i].onload = resolve;
-        })
-      );
+        }),
+        cancel: () => {
+          icons[i].onload = null;
+        },
+      };
+      promises.push(promiseWrapper);
     }
 
     for (let i = 0; i < spans.length; i++) {
-      promises.push(
-        new Promise((resolve) => {
+      const promiseWrapper = {
+        promise: new Promise((resolve) => {
           spans[i].onload = resolve;
-        })
-      );
+        }),
+        cancel: () => {
+          spans[i].onload = null;
+        },
+      };
+      promises.push(promiseWrapper);
     }
 
     // wait for all promises to resolve before setting isLoading to false
@@ -67,7 +83,13 @@ const App = () => {
   }, []);
 
   if (loading) {
-    return <div className={style.loading}>Loading</div>;
+    return (
+      <div className={style.loading}>
+        <p>
+          <i class='fa-solid fa-circle-notch fa-spin'></i>
+        </p>
+      </div>
+    );
   }
   return (
     <div className={style.mainContainer}>
