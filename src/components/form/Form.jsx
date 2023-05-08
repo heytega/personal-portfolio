@@ -2,6 +2,9 @@ import React, { useState, useRef } from 'react';
 import PageTag from '../pageTag/PageTag';
 import Style from './Form.module.css';
 import { createBox, motion } from 'framer-motion';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 import useFirebase from '../../custom-hooks/useFirebase';
 
 // FRAMER MOTION ANIMATION FOR HELPER TEXT
@@ -120,14 +123,27 @@ const Form = ({ activeIndex }) => {
     e.preventDefault();
     setLoading(true);
     useFirebase(person);
-    setTimeout(() => {
-      setLoading(false);
-      setShowAlert(true);
-      setPerson({ firstName: '', lastName: '', email: '', message: '' });
-    }, 2000);
-    setTimeout(() => {
-      setShowAlert(false);
-    }, 4000);
+    setPerson({ firstName: '', lastName: '', email: '', message: '' });
+    toast.success('Your message has been sent!', {
+      position: 'top-right',
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'dark',
+    });
+    setLoading(false);
+    // setTimeout(() => {
+    //   setLoading(false);
+    //   // setShowAlert(true);
+    //   setPerson({ firstName: '', lastName: '', email: '', message: '' });
+    // }, 2000);
+
+    // setTimeout(() => {
+    //   setShowAlert(false);
+    // }, 4000);
   };
 
   return (
@@ -142,7 +158,7 @@ const Form = ({ activeIndex }) => {
         Hi there, contact me to ask about anything you have in mind.
       </p>
 
-      <div
+      {/* <div
         style={{ opacity: showAlert ? '1' : '0' }}
         className={Style.messageAlert}
       >
@@ -150,8 +166,8 @@ const Form = ({ activeIndex }) => {
           <i class='fa-solid fa-check'></i>
         </div>
         <p className={Style.alertText}>Your message has been sent!</p>
-      </div>
-
+      </div> */}
+      <ToastContainer />
       <form className={Style.form} onSubmit={handleSubmit} autoComplete='on'>
         <div className={Style.formFlexContainer}>
           <div className={Style.formControl}>
