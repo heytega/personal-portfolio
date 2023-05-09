@@ -79,7 +79,7 @@ const NavBar = ({ setActiveIndex }) => {
     tl.to(navRef.current, { '--active-color': 'red', duration: 0.3 });
     tlRef.current = tl;
 
-    // Add ScrollTrigger to each section in the navigation
+    // Add ScrollTrigger to each section in the navigation section
     const sections = navRef.current.querySelectorAll('section');
     sections.forEach((section, index) => {
       ScrollTigger.create({
