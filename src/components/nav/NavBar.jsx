@@ -72,26 +72,26 @@ const NavBar = ({ setActiveIndex }) => {
   };
 
   // USE-EFFECTS
-  useEffect(() => {
-    //timeline for animating the active color of the navigation using GSAP
-    const tl = gsap.timeline({ paused: true });
-    tl.to(navRef.current, { '--active-color': 'blue', duration: 0.3 });
-    tl.to(navRef.current, { '--active-color': 'red', duration: 0.3 });
-    tlRef.current = tl;
+  // useEffect(() => {
+  //   //timeline for animating the active color of the navigation using GSAP
+  //   const tl = gsap.timeline({ paused: true });
+  //   tl.to(navRef.current, { '--active-color': 'blue', duration: 0.3 });
+  //   tl.to(navRef.current, { '--active-color': 'red', duration: 0.3 });
+  //   tlRef.current = tl;
 
-    // Add ScrollTrigger to each section in the navigation section
-    const sections = navRef.current.querySelectorAll('section');
-    sections.forEach((section, index) => {
-      ScrollTigger.create({
-        trigger: section,
-        start: 'top center',
-        onEnter: () => {
-          setActiveIndex(index);
-          tlRef.current.restart();
-        },
-      });
-    });
-  }, []);
+  //   // Add ScrollTrigger to each section in the navigation section
+  //   const sections = navRef.current.querySelectorAll('section');
+  //   sections.forEach((section, index) => {
+  //     ScrollTigger.create({
+  //       trigger: section,
+  //       start: 'top center',
+  //       onEnter: () => {
+  //         setActiveIndex(index);
+  //         tlRef.current.restart();
+  //       },
+  //     });
+  //   });
+  // }, []);
 
   return (
     <div className={Style.navBarContainer} ref={navRef}>
