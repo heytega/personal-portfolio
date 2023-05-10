@@ -71,28 +71,6 @@ const NavBar = ({ setActiveIndex }) => {
     setShowSideMenu(false);
   };
 
-  // USE-EFFECTS
-  // useEffect(() => {
-  //   //timeline for animating the active color of the navigation using GSAP
-  //   const tl = gsap.timeline({ paused: true });
-  //   tl.to(navRef.current, { '--active-color': 'blue', duration: 0.3 });
-  //   tl.to(navRef.current, { '--active-color': 'red', duration: 0.3 });
-  //   tlRef.current = tl;
-
-  //   // Add ScrollTrigger to each section in the navigation section
-  //   const sections = navRef.current.querySelectorAll('section');
-  //   sections.forEach((section, index) => {
-  //     ScrollTigger.create({
-  //       trigger: section,
-  //       start: 'top center',
-  //       onEnter: () => {
-  //         setActiveIndex(index);
-  //         tlRef.current.restart();
-  //       },
-  //     });
-  //   });
-  // }, []);
-
   return (
     <div className={Style.navBarContainer} ref={navRef}>
       <button
@@ -134,13 +112,7 @@ const NavBar = ({ setActiveIndex }) => {
             className={Style.navItem}
             onClick={() => handleButtonClick(li.tag)}
           >
-            <i
-              style={{
-                '--active-color': 'transparent',
-                background: `var(--active-color)`,
-              }}
-              class={li.i}
-            ></i>
+            <i class={li.i}></i>
             <p className={Style.tag}>{li.tag}</p>
             <p
               className={Style.feed}
