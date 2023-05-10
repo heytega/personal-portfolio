@@ -30,12 +30,19 @@ const Socials = () => {
         </a>
       </li>
       <li>
-        <a href='#' className={Style.handle}>
+        <a
+          href='https://www.instagram.com/christiantae_/'
+          className={Style.handle}
+        >
           <i class='fa-brands fa-instagram'></i>
         </a>
       </li>
       <li>
-        <a href='github.com/heytega' target='_blank' className={Style.handle}>
+        <a
+          href='https://github.com/heytega'
+          target='_blank'
+          className={Style.handle}
+        >
           <i class='fa-brands fa-github'></i>
         </a>
       </li>
