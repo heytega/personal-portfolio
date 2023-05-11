@@ -15,8 +15,7 @@ const ResumeData = [
   },
   {
     date: 'SEP 2018 - MAY 2021',
-    title1:
-      'Front-End Web DeveloperHigher National Diploma in Computer Science',
+    title1: 'Higher National Diploma in Computer Science',
     company1: 'Federal Polytechnic Auchi',
     title2: 'National Diploma in Computer Science',
     company2: 'Federal Polytechnic Auchi',

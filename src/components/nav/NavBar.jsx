@@ -35,10 +35,6 @@ const NavBar = ({ setActiveIndex }) => {
   // LENIS IMPLEMENTATION
   const lenis = new Lenis();
 
-  // lenis.on('scroll', (e) => {
-  //   // console.log(e);
-  // });
-
   function raf(time) {
     lenis.raf(time);
     requestAnimationFrame(raf);
@@ -49,8 +45,6 @@ const NavBar = ({ setActiveIndex }) => {
   // USE INTERSECTION OBSERVER API TO DETECT WHEN A SECTION IS IN VIEW
   const handleButtonClick = (id) => {
     setActive(id);
-    // const targetElement = document.getElementById(id);
-    // console.log(targetElement);
     setShowSideMenu(false);
     lenis.scrollTo(`#${id}`);
     hideMenu();
