@@ -16,11 +16,11 @@ const PageTag = ({ icon, tag }) => {
       gsap.to(c, {
         // yPercent: 100,
         opacity: 1,
-        duration: 2,
+        duration: 1,
         scrollTrigger: {
           trigger: c,
           start: 'bottom bottom',
-          end: 'top center',
+          end: 'top 0%',
           toggleActions: 'restart, pause, reverse, reset',
           scrub: 1,
         },
