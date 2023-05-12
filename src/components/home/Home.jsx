@@ -3,8 +3,12 @@ import Style from './Home.module.css';
 import PageTag from '../pageTag/PageTag';
 import Projects from '../../assets/round-text.png';
 import Lenis from '@studio-freight/lenis';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useEffect } from 'react';
 
 const Home = ({ activeIndex }) => {
+  gsap.registerPlugin(ScrollTrigger);
   // LENIS IMPLEMENTATION
   const lenis = new Lenis();
 
@@ -32,7 +36,12 @@ const Home = ({ activeIndex }) => {
       }
       id='home'
     >
-      <PageTag tag='introduce' icon='fa-house-user' />
+      <PageTag
+        tag='introduce'
+        icon='fa-house-user'
+        animateClass='animate-home'
+      />
+
       <h1 className={Style.mainHeading}>
         Hello I'm <span className={Style.green}>Tega</span>, A Frontend Web
         Developer

@@ -6,7 +6,7 @@ import ResumeData from './ResumeData';
 const Resume = () => {
   return (
     <section className={Style.resumeContainer} id='resume'>
-      <PageTag tag='resume' icon='fa-briefcase' />
+      <PageTag tag='resume' icon='fa-briefcase' animateClass='animate-resume' />
       <h1>
         Education & <span>Experience</span>
       </h1>

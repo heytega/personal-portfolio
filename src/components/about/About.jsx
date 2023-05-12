@@ -5,7 +5,7 @@ import Style from './About.module.css';
 const About = () => {
   return (
     <section className={Style.aboutContainer} id='about'>
-      <PageTag tag='about' icon='fa-user' />
+      <PageTag tag='about' icon='fa-user' animateClass='animate-about' />
       <h1>
         {/* Every great design begin with an even{' '}
         <span className={Style.green}>better story</span> */}
