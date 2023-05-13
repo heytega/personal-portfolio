@@ -13,18 +13,28 @@ const PageTag = ({ icon, tag }) => {
     console.log(Array);
     console.log(sections);
     Array.forEach((c) =>
-      gsap.to(c, {
-        // yPercent: 100,
-        opacity: 1,
-        duration: 1,
-        scrollTrigger: {
-          trigger: c,
-          start: 'bottom bottom',
-          end: 'top 0%',
-          toggleActions: 'restart, pause, reverse, reset',
-          scrub: 1,
+      gsap.fromTo(
+        c,
+        {
+          // opacity: 0,
+          y: 40,
         },
-      })
+        {
+          // opacity: 1,
+          y: 0,
+          delay: 0.5,
+          duration: 1.5,
+          ease: 'power1.out',
+          scrollTrigger: {
+            trigger: c,
+            start: 'top 99%',
+            end: '+=50',
+            toggleActions: 'restart, none, reverse, pause',
+            scrub: 1,
+            // markers: true,
+          },
+        }
+      )
     );
   });
 
