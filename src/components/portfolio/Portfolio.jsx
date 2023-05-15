@@ -61,7 +61,7 @@ const Portfolio = ({ activeIndex }) => {
   return (
     <section className={Style.portfolioContainer} id='portfolio'>
       <PageTag tag='portfolio' icon='fa-rectangle-list' />
-      <h1>
+      <h1 className={`animateHeader`}>
         Featured <span>Projects</span>
       </h1>
       <div className={Style.portfolioItems}>
