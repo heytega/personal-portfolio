@@ -150,23 +150,12 @@ const Form = ({ activeIndex }) => {
     <section className={Style.formContainer} id='form'>
       <PageTag tag='contact' icon='fa-pager' />
 
-      <h1>
+      <h1 className={`animateHeader`}>
         Let's Work <span>Together!</span>
       </h1>
-      {/* <h3>Contact Me</h3> */}
       <p className={Style.p}>
         Hi there, contact me to ask about anything you have in mind.
       </p>
-
-      {/* <div
-        style={{ opacity: showAlert ? '1' : '0' }}
-        className={Style.messageAlert}
-      >
-        <div className={Style.alertCircle}>
-          <i class='fa-solid fa-check'></i>
-        </div>
-        <p className={Style.alertText}>Your message has been sent!</p>
-      </div> */}
       <ToastContainer />
       <form className={Style.form} onSubmit={handleSubmit} autoComplete='on'>
         <div className={Style.formFlexContainer}>
@@ -274,18 +263,13 @@ const Form = ({ activeIndex }) => {
 
         <div className={Style.formControl}>
           <label className={Style.checkboxContainer}>
-            {/* You agree to providing your data to <span>Tega</span> who may
-            contact you */}
-            In order to send this message, do agree to provide your data to{' '}
+            In order to send this message, you agree to provide your data to{' '}
             <span>Tega</span> who may contact you
             <input onChange={handleCheck} type='checkbox' />
             <span className={Style.checkmark}></span>
           </label>
         </div>
         <div className={Style.formControl}>
-          {/* <button className={Style.btn} id='btn__submit' type='submit'>
-            Send message
-          </button> */}
           <button
             disabled={checked ? false : true}
             className={
