@@ -10,12 +10,16 @@ import Portfolio from './components/portfolio/Portfolio';
 import Form from './components/form/Form';
 import NavBar from './components/nav/NavBar';
 import newVideo from './assets/video.mp4';
+import animateHeaders from './animations/animateHeaders';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
+    // To trigger the animation on the headers
+    animateHeaders();
+
     const images = document.getElementsByTagName('img');
     const videos = document.getElementsByTagName('video');
     const icons = document.getElementsByTagName('i');

@@ -8,7 +8,7 @@ const PageTag = ({ icon, tag }) => {
   gsap.registerPlugin(ScrollTrigger);
 
   useEffect(() => {
-    let sections = window.document.querySelectorAll('.animate');
+    let sections = window.document.querySelectorAll('.animateTag');
     const Array = gsap.utils.toArray(sections);
     console.log(Array);
     console.log(sections);
@@ -40,7 +40,7 @@ const PageTag = ({ icon, tag }) => {
   });
 
   return (
-    <div className={`${Style.pageTagContainer} animate`}>
+    <div className={`${Style.pageTagContainer} animateTag`}>
       <i class={`fa-solid ${icon}`}></i>
       <p className={Style.tag}>{tag}</p>
     </div>

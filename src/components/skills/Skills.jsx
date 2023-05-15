@@ -10,9 +10,11 @@ const Skills = ({ activeIndex }) => {
   return (
     <section className={Style.skillsContainer} id='skills'>
       <PageTag tag='skills' icon='fa-kitchen-set' />
-      <h1>
+
+      <h1 className={`animateHeader`}>
         My <span>Advantages</span>
       </h1>
+
       <div className={Style.skills}>
         <div className={Style.skill}>
           <div className={Style.skillInner}>

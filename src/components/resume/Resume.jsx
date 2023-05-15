@@ -7,7 +7,7 @@ const Resume = () => {
   return (
     <section className={Style.resumeContainer} id='resume'>
       <PageTag tag='resume' icon='fa-briefcase' animateClass='animate-resume' />
-      <h1>
+      <h1 className={`animateHeader`}>
         Education & <span>Experience</span>
       </h1>
       {ResumeData.map((tml) => (
