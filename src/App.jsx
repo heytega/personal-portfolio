@@ -17,9 +17,11 @@ const App = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    // To trigger the animation on the headers
     animateHeaders();
+  });
 
+  useEffect(() => {
+    // To trigger the animation on the headers
     const images = document.getElementsByTagName('img');
     const videos = document.getElementsByTagName('video');
     const icons = document.getElementsByTagName('i');
