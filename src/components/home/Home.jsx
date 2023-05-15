@@ -42,7 +42,7 @@ const Home = ({ activeIndex }) => {
         animateClass='animate-home'
       />
 
-      <h1 className={Style.mainHeading}>
+      <h1 className={`${Style.mainHeading} animateHeader`}>
         Hello I'm <span className={Style.green}>Tega</span>, A Frontend Web
         Developer
         {/* and
