@@ -26,7 +26,7 @@ const headerAnimation = () => {
           start: 'top 90%',
           end: '+=50',
           toggleActions: 'restart, none, reverse, pause',
-          scrub: true,
+          scrub: 1,
           // markers: true,
         },
       }
