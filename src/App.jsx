@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import style from './App.module.css';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
@@ -16,10 +16,11 @@ const App = () => {
   const [loading, setLoading] = useState(true);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  useEffect(() => {
-    // To trigger the animation on the headers
+  useLayoutEffect(() => {
     animateHeaders();
+  });
 
+  useEffect(() => {
     const images = document.getElementsByTagName('img');
     const videos = document.getElementsByTagName('video');
     const icons = document.getElementsByTagName('i');

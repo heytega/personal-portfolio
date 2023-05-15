@@ -17,8 +17,8 @@ const headerAnimation = () => {
       {
         opacity: 1,
         y: 0,
-        delay: 1,
-        // duration: 1.5,
+        // delay: 1.5,
+
         duration: 2.5,
         ease: 'power1.out',
         scrollTrigger: {
@@ -26,7 +26,7 @@ const headerAnimation = () => {
           start: 'top 90%',
           end: '+=50',
           toggleActions: 'restart, none, reverse, pause',
-          scrub: 1,
+          scrub: true,
           // markers: true,
         },
       }
