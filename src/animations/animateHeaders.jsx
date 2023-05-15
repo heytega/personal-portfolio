@@ -17,7 +17,7 @@ const headerAnimation = () => {
       {
         opacity: 1,
         y: 0,
-        delay: 1,
+        delay: 0,
         // duration: 1.5,
         duration: 2.5,
         ease: 'power1.out',
