@@ -48,7 +48,7 @@ const Home = ({ activeIndex }) => {
         {/* and
         Computer Scientist */}
       </h1>
-      <p className={Style.mainParagraph}>
+      <p className={`${Style.mainParagraph} animateParagraph`}>
         My goal is to empower your brand with modern and intuitive interfaces,
         <br />
         bringing your ideas to life, one pixel at a time.
