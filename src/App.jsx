@@ -11,6 +11,7 @@ import Form from './components/form/Form';
 import NavBar from './components/nav/NavBar';
 import newVideo from './assets/video.mp4';
 import animateHeaders from './animations/animateHeaders';
+import animateParagraph from './animations/animateParagraph';
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -18,6 +19,7 @@ const App = () => {
 
   useLayoutEffect(() => {
     animateHeaders();
+    animateParagraph();
   });
 
   useEffect(() => {

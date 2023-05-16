@@ -11,14 +11,14 @@ const About = () => {
         <span> Inno</span>vation, <span>Crea</span>tivity, and
         <span> Gro</span>wth
       </h1>
-      <p className={Style.p}>
+      <p className={`${Style.p} animateParagraph`}>
         My journey in tech began with a passion for developing web and desktop
         applications that streamline workflows and meet the needs of users. As a
         frontend developer, my focus has always been on delivering a seamless
         user experience that incorporates innovative ideas and the latest
         technologies.
       </p>
-      <p className={Style.p}>
+      <p className={`${Style.p} animateParagraph`}>
         {' '}
         During my time as a Frontend ReactJS Developer Intern with HNG / Zuri, I
         gained valuable experience building web and desktop applications. This
@@ -26,7 +26,7 @@ const About = () => {
         environment and my attention to detail, has prepared me for new
         challenges in the tech industry.
       </p>
-      <p className={Style.p}>
+      <p className={`${Style.p} animateParagraph`}>
         I am excited to take on new opportunities and work with dynamic and
         fast-growing companies. I am committed to delivering pixel-perfect
         design implementation and user-friendly experiences, and I believe my
