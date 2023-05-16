@@ -16,8 +16,8 @@ const animateTag = () => {
         opacity: 1,
         y: 0,
         delay: 0.5,
-        // duration: 1.5,
-        duration: 2,
+        // duration: 1,
+        // duration: 2,
         ease: 'power1.out',
         scrollTrigger: {
           trigger: c,
