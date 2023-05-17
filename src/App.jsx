@@ -17,12 +17,12 @@ const App = () => {
   const [loading, setLoading] = useState(true);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     animateHeaders();
     animateParagraph();
   });
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const images = document.getElementsByTagName('img');
     const videos = document.getElementsByTagName('video');
     const icons = document.getElementsByTagName('i');
@@ -87,7 +87,7 @@ const App = () => {
 
     // Cancel promises if component unmounts before they resolve
     return () => promises.forEach((promise) => promise.cancel());
-  }, []);
+  });
 
   if (loading) {
     return (
