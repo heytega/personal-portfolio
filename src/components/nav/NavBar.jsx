@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const NavBar = ({ setActiveIndex }) => {
   // STATES
   const navRef = useRef(null);
-  const tlRef = useRef(null);
+  // const tlRef = useRef(null);
   const [active, setActive] = useState(null);
 
   const [showSideMenu, setShowSideMenu] = useState(false);
