@@ -6,7 +6,7 @@ import RQ from '../../assets/reactquery.svg';
 import vite from '../../assets/vite.svg';
 import Electron from '../../assets/electron.svg';
 import Bootstrap from '../../assets/Bootstrap.svg';
-import Greensock from '../../assets/greensock.svg';
+import GreenSock from '../../assets/greensock.svg';
 
 const Skills = ({ activeIndex }) => {
   return (
@@ -76,7 +76,7 @@ const Skills = ({ activeIndex }) => {
 
         <div className={Style.skill}>
           <div className={Style.skillInner}>
-            <img className={Style.icon} src={Greensock} alt='GSAP' />
+            <img className={Style.icon} src={GreenSock} alt='GSAP' />
             <h2 className={Style.percent}>60%</h2>
           </div>
           <p className={Style.name}>GSAP</p>
