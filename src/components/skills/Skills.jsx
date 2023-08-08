@@ -21,7 +21,7 @@ const Skills = ({ activeIndex }) => {
         <div className={Style.skill}>
           <div className={Style.skillInner}>
             <i class='fa-brands fa-square-js'></i>
-            <h2 className={Style.percent}>80%</h2>
+            {/* <h2 className={Style.percent}>80%</h2> */}
           </div>
           <p className={Style.name}>Javascript</p>
         </div>
@@ -29,7 +29,7 @@ const Skills = ({ activeIndex }) => {
         <div className={Style.skill}>
           <div className={Style.skillInner}>
             <i class='fa-brands fa-react'></i>
-            <h2 className={Style.percent}>85%</h2>
+            {/* <h2 className={Style.percent}>85%</h2> */}
           </div>
           <p className={Style.name}>React</p>
         </div>
@@ -37,7 +37,7 @@ const Skills = ({ activeIndex }) => {
         <div className={Style.skill}>
           <div className={Style.skillInner}>
             <img className={Style.icon} src={MUI} alt='mui' />
-            <h2 className={Style.percent}>80%</h2>
+            {/* <h2 className={Style.percent}>80%</h2> */}
           </div>
           <p className={Style.name}>Material UI</p>
         </div>
@@ -45,7 +45,7 @@ const Skills = ({ activeIndex }) => {
         <div className={Style.skill}>
           <div className={Style.skillInner}>
             <img className={Style.icon} src={RQ} alt='Tanstack Query' />
-            <h2 className={Style.percent}>70%</h2>
+            {/* <h2 className={Style.percent}>70%</h2> */}
           </div>
           <p className={Style.name}>Tanstack Query</p>
         </div>
@@ -53,7 +53,7 @@ const Skills = ({ activeIndex }) => {
         <div className={Style.skill}>
           <div className={Style.skillInner}>
             <img className={Style.icon} src={vite} alt='Vitejs' />
-            <h2 className={Style.percent}>65%</h2>
+            {/* <h2 className={Style.percent}>65%</h2> */}
           </div>
           <p className={Style.name}>Vitejs</p>
         </div>
@@ -61,7 +61,7 @@ const Skills = ({ activeIndex }) => {
         <div className={Style.skill}>
           <div className={Style.skillInner}>
             <img className={Style.icon} src={Electron} alt='Electron' />
-            <h2 className={Style.percent}>50%</h2>
+            {/* <h2 className={Style.percent}>50%</h2> */}
           </div>
           <p className={Style.name}>Electron</p>
         </div>
@@ -69,7 +69,7 @@ const Skills = ({ activeIndex }) => {
         <div className={Style.skill}>
           <div className={Style.skillInner}>
             <img className={Style.icon} src={Bootstrap} alt='bootstrap' />
-            <h2 className={Style.percent}>80%</h2>
+            {/* <h2 className={Style.percent}>80%</h2> */}
           </div>
           <p className={Style.name}>Bootstrap</p>
         </div>
@@ -77,7 +77,7 @@ const Skills = ({ activeIndex }) => {
         <div className={Style.skill}>
           <div className={Style.skillInner}>
             <img className={Style.icon} src={GreenSock} alt='GSAP' />
-            <h2 className={Style.percent}>60%</h2>
+            {/* <h2 className={Style.percent}>60%</h2> */}
           </div>
           <p className={Style.name}>GSAP</p>
         </div>
