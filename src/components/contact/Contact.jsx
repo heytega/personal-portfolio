@@ -39,10 +39,10 @@ const Contact = () => {
         </div>
         {/* <h2 className={Style.address}>akpovbiyoranthony@gmail.com</h2> */}
         <h2 className={`${Style.address} ${Style.mb20}`}>
-          Base in Ogun State Nigeria
+          Base in Lagos State Nigeria
         </h2>
         <p className={Style.copyright}>
-          &copy; 2023 Fortae. All Rights Reserved
+          &copy; 2024 Fortae. All Rights Reserved
         </p>
         <Socials />
       </div>
