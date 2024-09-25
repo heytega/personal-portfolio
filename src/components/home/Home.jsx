@@ -44,7 +44,8 @@ const Home = ({ activeIndex }) => {
 
       <h1 className={`${Style.mainHeading} animateHeader`}>
         Hello I'm <span className={Style.green}>Tega</span>, A Frontend Web
-        Developer
+        Developer <span className='Style green'>and</span> Technical Support
+        Engineer
         {/* and
         Computer Scientist */}
       </h1>
@@ -52,6 +53,11 @@ const Home = ({ activeIndex }) => {
         My goal is to empower your brand with modern and intuitive interfaces,
         <br />
         bringing your ideas to life, one pixel at a time.
+        <br />
+        <br />I also offer top-tier technical support for enterprises like
+        Microsoft, <br />
+        seamlessly connecting products with end users for an exceptional bonding
+        experience.
       </p>
       <a
         href='#porfolio'
@@ -77,7 +83,7 @@ const Home = ({ activeIndex }) => {
       </a>
       <div className={Style.stats}>
         <div className={Style.stat}>
-          <h2 className={Style.number}>1+</h2>
+          <h2 className={Style.number}>3+</h2>
           <p className={Style.p}>
             Years of <br /> Experience
           </p>

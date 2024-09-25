@@ -1,16 +1,16 @@
 const ResumeData = [
+  // {
+  //   date: 'APR 2024 - Present',
+  //   title1: 'Microsoft 365 Administrator',
+  //   company1: 'Iykkmann Multilinks Limited',
+  // },
   {
-    date: 'APR 2024 - Present',
-    title1: 'Microsoft 365 Administrator',
-    company1: 'Iykkmann Multilinks Limited',
-  },
-  {
-    date: 'AUG 2023 - APR 2024',
+    date: 'AUG 2023 - Present',
     title1: 'Technical Support Engineer Tier II',
-    company1: 'Tek Experts',
+    company1: 'Microsoft',
   },
   {
-    date: 'DEC 2022 - Present',
+    date: 'DEC 2022 - MAR 2024',
     title1: 'Front-End Web Developer / Microsoft 365 Administrator',
     company1: 'Opspad',
     title2: '',
